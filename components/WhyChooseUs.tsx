@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ShieldCheck, 
-  Award, 
-  TrendingUp, 
-  Users, 
-  CheckCircle2, 
-  Lock, 
-  Percent, 
+import {
+  ShieldCheck,
+  Award,
+  TrendingUp,
+  Users,
+  CheckCircle2,
+  Lock,
+  Percent,
   HelpCircle,
   ArrowRight,
   Sparkles
@@ -74,7 +74,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
   return (
     <section className="py-20 bg-white" id="why-us">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Icon + Titles */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="w-14 h-14 bg-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
@@ -83,8 +83,8 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
           <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-3">
             Why Choose Compare Bond Rates?
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            With 9 years of experience and exclusive access to institutional bond markets, we're the UK's most trusted independent bond comparison service.
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            Providing direct access to wholesale institutional bond markets, statutory FSCS capital protection, and contracted fixed yields up to 8.20% p.a. with 100% impartial UK comparison.
           </p>
         </div>
 
@@ -114,10 +114,10 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
 
         {/* 2-Column Feature Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* Left Column: Professional Bond Service */}
           <div className="lg:col-span-7 bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
-            
+
             {/* Visual Graphic Representation */}
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-900 via-blue-950 to-slate-900 p-8 text-white mb-6">
               <div className="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
@@ -165,7 +165,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
 
           {/* Right Column: CTA Box & Comparison Points */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            
+
             {/* Top Box: Ready to Grow Your Wealth? */}
             <div className="bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900 text-white rounded-3xl p-6 sm:p-7 text-center shadow-md space-y-4">
               <div className="w-12 h-12 bg-white/15 text-white rounded-2xl flex items-center justify-center mx-auto">

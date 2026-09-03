@@ -10,8 +10,10 @@ import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
 import LeadModal from '@/components/LeadModal';
 import LegalModal from '@/components/LegalModal';
+import LeadFormModal from '@/components/LeadFormModal';
 
 export default function Home() {
+  const [formModalOpen, setFormModalOpen] = useState(false);
   const [leadModalOpen, setLeadModalOpen] = useState(false);
   const [leadData, setLeadData] = useState<any>(null);
 
@@ -21,14 +23,12 @@ export default function Home() {
   const [prefillAmount, setPrefillAmount] = useState<string>('50000');
   const [prefillTerm, setPrefillTerm] = useState<string>('2');
 
-  const scrollToLeadForm = () => {
-    const el = document.getElementById('lead-form-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+  const handleOpenFormModal = () => {
+    setFormModalOpen(true);
   };
 
   const handleLeadSuccess = (data: any) => {
+    setFormModalOpen(false);
     setLeadData(data);
     setLeadModalOpen(true);
   };
@@ -41,15 +41,15 @@ export default function Home() {
   const handleApplyFromCalculator = (amount: string, term: string) => {
     setPrefillAmount(amount);
     setPrefillTerm(term);
-    scrollToLeadForm();
+    setFormModalOpen(true);
   };
 
   return (
     <div className="min-h-screen bg-white flex flex-col selection:bg-emerald-600 selection:text-white">
-      {/* 1. Header (Logo + Compare The Market) */}
-      <Header onCompareClick={scrollToLeadForm} />
+      {/* 1. Header (Logo + Compare The Market with Popup Trigger) */}
+      <Header onCompareClick={handleOpenFormModal} />
 
-      {/* Main Page Flow (Exact 1:1 Reference Sections) */}
+      {/* Main Page Flow */}
       <main className="flex-grow">
         {/* 2. Hero Section + 4-Step Lead Form */}
         <Hero 
@@ -62,23 +62,33 @@ export default function Home() {
         {/* 3. Bond Returns Calculator */}
         <ReturnsCalculator onApplyRate={handleApplyFromCalculator} />
 
-        {/* 4. Why Choose Wise Rates / Compare Bond Rates */}
-        <WhyChooseUs onCtaClick={scrollToLeadForm} />
+        {/* 4. Why Choose Compare Bond Rates */}
+        <WhyChooseUs onCtaClick={handleOpenFormModal} />
 
         {/* 5. What Our Clients Say (Testimonials & Reviews) */}
-        <Testimonials onCtaClick={scrollToLeadForm} />
+        <Testimonials onCtaClick={handleOpenFormModal} />
 
         {/* 6. Frequently Asked Questions */}
-        <Faq onCtaClick={scrollToLeadForm} />
+        <Faq onCtaClick={handleOpenFormModal} />
       </main>
 
       {/* 7. Footer */}
       <Footer 
         onOpenLegal={handleOpenLegal}
-        onScrollToForm={scrollToLeadForm}
+        onScrollToForm={handleOpenFormModal}
       />
 
-      {/* Verification & Instant Match Modal */}
+      {/* Interactive Form Popup Modal (Opened by 'Compare The Market' button) */}
+      <LeadFormModal
+        isOpen={formModalOpen}
+        onClose={() => setFormModalOpen(false)}
+        onSuccess={handleLeadSuccess}
+        onOpenLegal={handleOpenLegal}
+        initialAmount={prefillAmount}
+        initialTerm={prefillTerm}
+      />
+
+      {/* Verification & Instant Match Confirmation Modal */}
       <LeadModal 
         isOpen={leadModalOpen}
         onClose={() => setLeadModalOpen(false)}

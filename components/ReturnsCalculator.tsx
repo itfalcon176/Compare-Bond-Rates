@@ -54,19 +54,20 @@ export default function ReturnsCalculator({ onApplyRate }: ReturnsCalculatorProp
   };
 
   return (
-    <section className="py-20 bg-slate-50/70 border-b border-slate-100" id="calculator">
+    <section className="py-20 bg-slate-50 border-b border-slate-200" id="calculator">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Icon + Titles */}
         <div className="text-center mb-10">
-          <div className="w-14 h-14 bg-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-            <Calculator className="w-6 h-6" />
+          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3.5 py-1 rounded-full text-xs font-bold mb-3 shadow-sm">
+            <Calculator className="w-3.5 h-3.5 text-emerald-600" />
+            <span>High-Precision Yield Simulator</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-3">
-            Bond Returns Calculator
+            Fixed-Yield &amp; Cashflow Simulator
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
-            Calculate your potential returns with our professional bond calculator. Get instant results based on current market rates.
+          <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
+            Simulate your contractually guaranteed returns across 1 to 5-year fixed terms. Compare monthly income payouts against compounded maturity growth in real time.
           </p>
         </div>
 

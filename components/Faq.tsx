@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HelpCircle, ChevronDown, ArrowRight } from 'lucide-react';
+import { HelpCircle, ChevronDown, ArrowRight, ShieldCheck, Sparkles, Building2, Lock, Percent } from 'lucide-react';
 
 interface FaqProps {
   onCtaClick: () => void;
@@ -13,44 +13,44 @@ export default function Faq({ onCtaClick }: FaqProps) {
 
   const faqs = [
     {
-      q: "What are fixed-rate bonds and how do they work?",
-      a: "Fixed-rate bonds are investment products where you lend money to a financial institution for a set period at a guaranteed interest rate. Your capital is locked in for the term, but you receive predictable returns either monthly, annually, or at maturity. They're ideal for investors seeking security and steady income.",
+      q: "How are fixed-rate bond coupon yields (up to 8.20% p.a.) guaranteed?",
+      a: "Fixed-rate bonds are legally binding debt instruments issued by authorized UK financial institutions and corporate entities. Once you lock in your allocation, the issuing institution is contractually obligated to pay your fixed interest rate for the entire agreed term, completely unaffected by Bank of England base rate adjustments or financial market volatility.",
     },
     {
-      q: "Are my investments protected and regulated?",
-      a: "All bonds we recommend are from authorised and regulated institutions. Most deposits are protected by the Financial Services Compensation Scheme (FSCS) up to £120,000 per authorised institution, providing additional security for your investments.",
+      q: "How does statutory FSCS deposit protection work for bondholders?",
+      a: "Eligible fixed deposits and qualifying savings bonds are protected by the UK Financial Services Compensation Scheme (FSCS) up to £120,000 per person, per authorized banking licence. This provides statutory government-backed compensation covering 100% of your initial capital and accrued interest against institutional default.",
     },
     {
-      q: "What's the minimum investment amount?",
-      a: "Minimum investment amounts vary by provider and bond type, typically starting from £5,000. However, many of our best rates are available from £25,000. We'll help you find suitable options regardless of your investment amount and can recommend strategies to maximise your returns.",
+      q: "What is the minimum and maximum capital threshold?",
+      a: "Standard institutional fixed tranches typically start from £10,000, while premier high-yield corporate notes begin from £25,000 to £50,000. There are no upper allocation limits for high-net-worth (HNW) investors, family offices, or corporate treasury deposits exceeding £1,000,000+.",
     },
     {
-      q: "How do your rates compare to high street banks?",
-      a: "Our rates are typically 0.5-1.5% higher than standard high street bank offerings. We have access to exclusive institutional rates and wholesale markets that aren't available to individual investors directly. This means better returns for your money with the same level of security.",
+      q: "Why are wholesale institutional rates higher than high-street retail banks?",
+      a: "Traditional high-street banks maintain expensive branch networks and high operational overheads, passing only a fraction of their lending margins to retail depositors. Institutional fixed-income notes connect investors directly with corporate, infrastructure, and sovereign debt desks, eliminating retail intermediary markups.",
     },
     {
-      q: "Can I access my money early if needed?",
-      a: "Most fixed-rate bonds require your money to be locked in for the full term. However, some providers offer early access with penalties, while others provide notice accounts with competitive rates but more flexibility. We'll discuss your liquidity needs during consultation to find the right balance.",
+      q: "Can I choose between monthly cash income and compounded growth at maturity?",
+      a: "Yes. Most featured fixed-rate products offer tailored payout schedules. You can select guaranteed monthly passive income paid directly into your UK bank account on a set date, quarterly disbursements, or annual compounding at maturity to maximize total cumulative profit.",
     },
     {
-      q: "What fees do you charge for your service?",
-      a: "Our consultation and comparison service is completely free. We're paid directly by the institutions when you invest, so there are no fees deducted from your investment. This means you get professional advice and access to exclusive rates at no cost to you.",
+      q: "Are these fixed-rate bonds eligible for SIPP, SSAS, or ISA tax wrappers?",
+      a: "Yes. Many of our featured fixed-rate notes and cash bonds are structured for inclusion within Self-Invested Personal Pensions (SIPPs), Small Self-Administered Schemes (SSAS), and Stocks & Shares ISAs, allowing you to generate tax-free or tax-deferred fixed returns within your annual allowances.",
     },
     {
-      q: "How quickly can I start investing?",
-      a: "Once you've chosen a bond, the process typically takes 3-5 working days. This includes account opening, identity verification, and fund transfer. Some providers offer faster processing, and we'll guide you through each step to ensure a smooth experience.",
+      q: "How does CompareBondRates UK provide a 100% free service to investors?",
+      a: "Our independent comparison and introductory platform is completely free for individual and corporate investors. Issuing institutions pay a standardized placement fee upon successful account funding. Zero broker fees, management deductions, or subscription charges are ever taken from your principal or interest.",
     },
     {
-      q: "What happens if interest rates rise after I invest?",
-      a: "With fixed-rate bonds, your rate is guaranteed for the full term regardless of market changes. If rates rise, you won't benefit during your current term, but you'll have certainty of returns. We can discuss laddering strategies to help manage interest rate risk across multiple investments.",
+      q: "What is a bond laddering strategy and how does it protect liquidity?",
+      a: "A bond ladder involves dividing your total investment across staggered maturity dates (e.g. 1, 2, 3, and 5 years). This ensures that a portion of your capital matures every 12 months for cash access or reinvestment, while locking in the highest yields on longer-term tranches.",
     },
     {
-      q: "Do you offer bonds for ISAs and pensions?",
-      a: "Yes, we have access to cash ISA bonds and SIPP-eligible bonds for pension investments. These can provide tax-efficient growth within your annual ISA allowance or pension contributions. Our advisors can help structure your investments for maximum tax efficiency.",
+      q: "What is the step-by-step application and onboarding process?",
+      a: "After completing our 60-second online rate request, you receive a full institutional prospectus. Your allocated UK relationship manager assists with digital identity verification and direct funds transfer to the regulated custodian, with accounts typically activated in 3 to 5 working days.",
     },
     {
-      q: "What makes Compare Bond Rates UK different from other services?",
-      a: "We combine 9 years of experience with exclusive institutional access, transparent pricing, and personalised service. Unlike online-only platforms, you get a dedicated advisor who understands your needs. We're also completely independent, so our recommendations are always in your best interest.",
+      q: "What happens to my capital at the end of the fixed term?",
+      a: "Upon term completion, 100% of your initial capital plus any final coupon interest is transferred directly back to your nominated UK bank account. You also have the option to roll over your funds into the highest available market rates at that time with a single instruction.",
     },
   ];
 
@@ -59,19 +59,20 @@ export default function Faq({ onCtaClick }: FaqProps) {
   };
 
   return (
-    <section className="py-20 bg-white" id="faq">
+    <section className="py-20 bg-slate-50 border-b border-slate-200" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Icon + Titles */}
         <div className="text-center mb-14">
-          <div className="w-14 h-14 bg-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-            <HelpCircle className="w-6 h-6" />
+          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3.5 py-1 rounded-full text-xs font-bold mb-3 shadow-sm">
+            <HelpCircle className="w-3.5 h-3.5 text-emerald-600" />
+            <span>UK Fixed-Income Intelligence</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-3">
             Frequently Asked Questions
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Get answers to common questions about bond investments and our services. Still have questions? Our experts are here to help.
+            Essential facts on FSCS statutory guarantees, wholesale yield mechanics, tax wrapper eligibility, and maturity procedures.
           </p>
         </div>
 
@@ -84,7 +85,7 @@ export default function Faq({ onCtaClick }: FaqProps) {
                 key={idx}
                 className={`border rounded-2xl transition-all duration-200 overflow-hidden ${
                   isOpen 
-                    ? 'border-blue-500 bg-slate-50/50 shadow-sm' 
+                    ? 'border-emerald-400 bg-white shadow-md' 
                     : 'border-slate-200 bg-white hover:border-slate-300'
                 }`}
               >
@@ -99,7 +100,7 @@ export default function Faq({ onCtaClick }: FaqProps) {
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="text-blue-700 flex-shrink-0"
+                    className="text-emerald-600 flex-shrink-0"
                   >
                     <ChevronDown className="w-5 h-5" />
                   </motion.div>
@@ -124,25 +125,33 @@ export default function Faq({ onCtaClick }: FaqProps) {
           })}
         </div>
 
-        {/* Bottom CTA Box: Discover the Best Rates in Under 60 Seconds */}
-        <div className="bg-slate-50 border border-slate-200/90 rounded-3xl p-8 sm:p-10 text-center shadow-sm space-y-4">
-          <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-slate-900">
-            Discover the Best Rates in Under 60 Seconds!
+        {/* Bottom CTA Card */}
+        <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-lg text-center space-y-4">
+          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Dedicated UK Fixed-Income Specialists</span>
+          </div>
+          <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
+            Have questions regarding your specific allocation?
           </h3>
-          <p className="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto leading-relaxed">
-            Ready to unlock exclusive bond rates that beat high street banks? It takes less than 60 seconds to discover your personalised rates and get started.
+          <p className="text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+            Our bond introduction specialists can walk you through institutional prospectuses, FSCS limits, and current peak yield availability.
           </p>
-          <div className="pt-2">
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <button
               type="button"
               onClick={onCtaClick}
-              className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-extrabold text-sm px-8 py-3.5 rounded-xl shadow-md transition-all"
+              className="px-6 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2"
             >
-              <span>Get My Rates Now</span>
+              <span>Get Your Impartial Bond Report</span>
               <ArrowRight className="w-4 h-4" />
-            </motion.button>
+            </button>
+            <a
+              href="tel:02038904567"
+              className="px-5 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm rounded-xl border border-slate-200 transition-all"
+            >
+              Call 0203 890 4567
+            </a>
           </div>
         </div>
 
