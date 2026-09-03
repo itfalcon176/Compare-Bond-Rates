@@ -55,22 +55,22 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
             className="lg:col-span-7 space-y-6"
           >
             {/* Top Pill with Pulsing Live Dot */}
-            <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-sm">
-              <span className="flex h-2.5 w-2.5 relative">
+            <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-sm">
+              <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
               </span>
-              <span>FSCS Protected Fixed Deposits</span>
-              <span className="bg-emerald-500/30 text-emerald-300 border border-emerald-400/30 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
-                Up to £120,000
+              <span>2026 Sovereign &amp; Corporate Bonds</span>
+              <span className="bg-emerald-500/30 text-emerald-300 border border-emerald-400/30 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">
+                FSCS £120k Protected
               </span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display text-white tracking-tight leading-[1.12]">
-              Compare the UK's <br />
+            {/* Main Clean Headline */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-5xl font-extrabold font-display text-white tracking-tight leading-[1.18] max-w-xl">
+              Guaranteed High-Yield <br />
               <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-white bg-clip-text text-transparent">
-                Best Bond Rates
+                UK Fixed-Rate Bonds
               </span>
             </h1>
 
@@ -84,20 +84,20 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
               </div>
               <div>
                 <div className="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
-                  <span>Earn up to 8.20% Fixed Returns</span>
+                  <span>Contracted Yields Up to 8.20% p.a.</span>
                   <span className="text-[11px] font-bold text-emerald-950 bg-emerald-300 px-2 py-0.5 rounded-full">
-                    Guaranteed
+                    Fixed Coupon
                   </span>
                 </div>
-                <span className="text-xs text-blue-100/80 block">
-                  Beat high street bank rates with institutional fixed-term bonds
+                <span className="text-xs text-blue-100/80 block mt-0.5">
+                  Direct institutional allocations with zero stock market volatility
                 </span>
               </div>
             </motion.div>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-xl">
-              Access exclusive fixed-rate bonds from leading financial institutions. Professional guidance, competitive rates, and complete transparency.
+            <p className="text-sm sm:text-base lg:text-lg text-blue-100/90 leading-relaxed max-w-xl">
+              Access wholesale fixed-term bonds with contracted returns up to 8.20% p.a. Complete capital preservation, statutory FSCS protection up to £120k, and 100% independent market intelligence.
             </p>
 
             {/* 3 Value Pillars */}
@@ -119,29 +119,29 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
             {/* Trust Footer Highlights */}
             <div className="flex flex-wrap items-center gap-6 pt-3 border-t border-white/15">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-amber-400/20 border border-amber-300/30 text-amber-300 flex items-center justify-center font-bold text-xs flex-shrink-0">
-                  <Award className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-full bg-emerald-400/20 border border-emerald-300/30 text-emerald-300 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-xs sm:text-sm font-bold text-white block">
-                    Award Winning Service
+                    Statutory FSCS Backing
                   </span>
                   <span className="text-[11px] text-blue-200 block">
-                    Money Marketing 2024
+                    Up to £120,000 Guarantee
                   </span>
                 </div>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-emerald-400/20 border border-emerald-300/30 text-emerald-300 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-teal-400/20 border border-teal-300/30 text-teal-300 flex items-center justify-center font-bold text-xs flex-shrink-0">
                   <Users className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-xs sm:text-sm font-bold text-white block">
-                    15,000+ Happy Clients
+                    14,200+ Portfolios Compared
                   </span>
                   <span className="text-[11px] text-blue-200 block">
-                    Over £2.5B+ placed
+                    £2.5B+ Capital Analyzed
                   </span>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
                     <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
                   ))}
                 </div>
-                <span>4.9/5 Rating</span>
+                <span>4.9/5 Independent Score</span>
               </div>
             </div>
           </motion.div>

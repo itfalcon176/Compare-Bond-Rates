@@ -17,13 +17,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Compare Bond Rates UK | Best UK Fixed-Rate Bonds & Return Calculator",
-  description: "Compare the UK's best fixed-rate bonds with CompareBondRates.co.uk. Access market-leading rates up to 8.20% p.a., FSCS protection up to £120,000, and use our free bond return calculator.",
-  keywords: "Compare Bond Rates UK, UK Fixed Rate Bonds, High Yield Bonds UK, Best Bond Rates 2026, FSCS Protected Bonds, Fixed Rate Savings",
+  title: "UK Fixed-Rate Bonds & Sovereign Yields | Independent Rate Comparison",
+  description: "Access market-leading UK fixed-rate bonds and fixed deposits with contracted yields up to 8.20% p.a., FSCS protection up to £120,000, and comprehensive yield cashflow simulation.",
+  keywords: "UK Fixed Rate Bonds, Sovereign Gilts UK, High Yield Fixed Deposits, FSCS Protected Bonds 2026, Fixed Income Comparison UK",
   authors: [{ name: "Compare Bond Rates Limited" }],
   openGraph: {
-    title: "Compare the UK's Best Bond Rates | CompareBondRates.co.uk",
-    description: "Find exclusive institutional fixed-rate bonds up to 8.20% p.a. 100% free impartial service with FSCS protection.",
+    title: "UK Fixed-Rate Bonds & Sovereign Yields | CompareBondRates.co.uk",
+    description: "Discover wholesale institutional fixed-rate bonds up to 8.20% p.a. 100% free impartial service with FSCS statutory protection.",
     url: "https://comparebondrates.co.uk",
     siteName: "Compare Bond Rates UK",
     locale: "en_GB",
