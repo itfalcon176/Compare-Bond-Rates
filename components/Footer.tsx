@@ -31,7 +31,7 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
             </Link>
             
             <p className="text-xs text-slate-400 leading-relaxed">
-              The UK's leading independent bond comparison service. Helping investors access the best fixed-rate bonds from top financial institutions since 2015.
+              The UK's premier independent fixed-income intelligence and bond comparison platform. Connecting individual investors, retirees, and corporate treasuries directly with wholesale institutional yields up to 8.20% p.a. and statutory FSCS protection.
             </p>
           </div>
 
