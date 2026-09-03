@@ -20,13 +20,13 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
           
           {/* Col 1: About */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block bg-white px-4 py-2.5 rounded-2xl border-0 shadow-none outline-none">
+            <Link href="/" className="inline-block px-1 py-1 border-0 shadow-none outline-none">
               <Image
-                src="/assets/logo.png"
+                src="/assets/footr-logo.png"
                 alt="Compare Bond Rates UK"
                 width={280}
                 height={80}
-                className="logo-img-clean w-[220px] sm:w-[250px] h-auto object-contain"
+                className="logo-img-clean w-[200px] sm:w-[240px] h-auto object-contain"
               />
             </Link>
             

@@ -45,12 +45,12 @@ export default function Header({ onCompareClick }: HeaderProps) {
           className="inline-flex items-center p-0 m-0 border-0 shadow-none outline-none bg-transparent flex-shrink-0"
         >
           <Image
-            src="/assets/logo.png"
+            src="/assets/new-logo.png"
             alt="Compare Bond Rates UK"
             width={340}
             height={120}
             priority
-            className="logo-img-clean w-[220px] sm:w-[270px] md:w-[310px] lg:w-[340px] h-auto max-h-16 sm:max-h-18 object-contain mix-blend-multiply transition-all"
+            className="logo-img-clean w-[220px] sm:w-[270px] md:w-[310px] lg:w-[340px] h-auto max-h-16 sm:max-h-18 object-contain transition-all"
           />
         </Link>
 
