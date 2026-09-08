@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, AlertTriangle, ShieldCheck, Landmark, CheckCircle2 } from 'lucide-react';
 
 interface FooterProps {
-  onOpenLegal: (type: string) => void;
+  onOpenLegal?: (type: string) => void;
   onScrollToForm: () => void;
 }
 
@@ -159,11 +159,11 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
         {/* Legal Links & Copyright */}
         <div className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <button onClick={() => onOpenLegal('privacy')} className="hover:text-emerald-400">Privacy Policy</button>
-            <button onClick={() => onOpenLegal('terms')} className="hover:text-emerald-400">Terms &amp; Conditions</button>
-            <button onClick={() => onOpenLegal('cookie')} className="hover:text-emerald-400">Cookie Policy</button>
-            <button onClick={() => onOpenLegal('complaints')} className="hover:text-emerald-400">Complaints Policy</button>
-            <button onClick={() => onOpenLegal('slavery')} className="hover:text-emerald-400">Modern Slavery Statement</button>
+            <Link href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-emerald-400 transition-colors">Terms &amp; Conditions</Link>
+            <Link href="/cookie-policy" className="hover:text-emerald-400 transition-colors">Cookie Policy</Link>
+            <Link href="/complaints-policy" className="hover:text-emerald-400 transition-colors">Complaints Policy</Link>
+            <Link href="/modern-slavery-statement" className="hover:text-emerald-400 transition-colors">Modern Slavery Statement</Link>
           </div>
           <p>© 2026 Compare Bond Rates Limited. All rights reserved.</p>
         </div>

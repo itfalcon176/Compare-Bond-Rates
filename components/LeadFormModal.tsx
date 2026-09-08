@@ -9,7 +9,7 @@ interface LeadFormModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSuccess: (data: any) => void;
-  onOpenLegal: (type: string) => void;
+  onOpenLegal?: (type: string) => void;
   initialAmount?: string;
   initialTerm?: string;
 }

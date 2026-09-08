@@ -22,7 +22,7 @@ import LeadForm from './LeadForm';
 
 interface HeroProps {
   onSuccessLead: (data: any) => void;
-  onOpenLegal: (type: string) => void;
+  onOpenLegal?: (type: string) => void;
   prefillAmount?: string;
   prefillTerm?: string;
 }

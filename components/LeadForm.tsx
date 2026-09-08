@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, 
@@ -24,7 +25,7 @@ interface LeadFormProps {
     term: string;
     timeframe: string;
   }) => void;
-  onOpenLegal: (type: string) => void;
+  onOpenLegal?: (type: string) => void;
   initialAmount?: string;
   initialTerm?: string;
 }
@@ -429,21 +430,23 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                   />
                   <span className="text-[11px] leading-tight text-slate-500">
                     I agree to the{' '}
-                    <button
-                      type="button"
-                      onClick={() => onOpenLegal('privacy')}
+                    <Link
+                      href="/privacy-policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-emerald-700 hover:underline font-semibold"
                     >
                       Privacy Policy
-                    </button>{' '}
+                    </Link>{' '}
                     and{' '}
-                    <button
-                      type="button"
-                      onClick={() => onOpenLegal('terms')}
+                    <Link
+                      href="/terms-and-conditions"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-emerald-700 hover:underline font-semibold"
                     >
                       Terms &amp; Conditions
-                    </button>
+                    </Link>
                     .
                   </span>
                 </label>
