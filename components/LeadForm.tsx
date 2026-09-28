@@ -87,17 +87,14 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
 
   const handleSelectAmount = (val: string) => {
     setSelectedAmount(val);
-    setTimeout(() => setStep(2), 180);
   };
 
   const handleSelectTerm = (val: string) => {
     setSelectedTerm(val);
-    setTimeout(() => setStep(3), 180);
   };
 
   const handleSelectTimeframe = (val: string) => {
     setSelectedTimeframe(val);
-    setTimeout(() => setStep(4), 180);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -218,6 +215,16 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                   );
                 })}
               </div>
+
+              <motion.button
+                type="button"
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+                onClick={() => setStep(2)}
+                className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2"
+              >
+                Continue <ArrowRight className="w-4 h-4" />
+              </motion.button>
             </motion.div>
           )}
 
@@ -281,6 +288,16 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                 })}
               </div>
 
+              <motion.button
+                type="button"
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+                onClick={() => setStep(3)}
+                className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2"
+              >
+                Continue <ArrowRight className="w-4 h-4" />
+              </motion.button>
+
               <div className="pt-1">
                 <button
                   type="button"
@@ -335,6 +352,16 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                   );
                 })}
               </div>
+
+              <motion.button
+                type="button"
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+                onClick={() => setStep(4)}
+                className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base rounded-xl shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2"
+              >
+                Continue <ArrowRight className="w-4 h-4" />
+              </motion.button>
 
               <div className="pt-1">
                 <button
