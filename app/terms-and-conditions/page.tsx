@@ -16,7 +16,7 @@ export default function TermsAndConditionsPage() {
       activeSlug="terms-and-conditions"
     >
       <div className="space-y-8">
-        
+
         {/* Intro Alert Box */}
         <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-5 text-blue-950 flex items-start gap-3.5">
           <Scale className="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" />
@@ -94,7 +94,7 @@ export default function TermsAndConditionsPage() {
             Rate Accuracy &amp; Market Availability
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
-            Yield rates displayed (e.g. up to 8.20% p.a.) are accurate at the time of publication but are subject to change without notice depending on issuer tranches, tranche closures, and macroeconomic interest rate adjustments. Allocation is subject to product capacity and issuer underwriting approval.
+            Yield rates displayed (e.g. up to 8.1% p.a.) are accurate at the time of publication but are subject to change without notice depending on issuer tranches, tranche closures, and macroeconomic interest rate adjustments. Allocation is subject to product capacity and issuer underwriting approval.
           </p>
         </section>
 

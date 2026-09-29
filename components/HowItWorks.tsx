@@ -29,9 +29,9 @@ export default function HowItWorks({ onCtaClick }: HowItWorksProps) {
     {
       num: "3",
       icon: ShieldCheck,
-      title: "3. Lock In Your Guaranteed Rate",
+      title: "3. Lock In Your Best Fixed Rate",
       desc: "Choose the fixed bond that best suits your goals and apply directly with the authorized institution. Your capital is protected under statutory FSCS limits up to £120,000.",
-      badge: "Rates Up to 8.20% • FSCS Protected",
+      badge: "Rates Up to 8.1% • FSCS Protected",
       badgeColor: "text-emerald-700 bg-emerald-50 border-emerald-200/70"
     },
   ];
@@ -39,18 +39,18 @@ export default function HowItWorks({ onCtaClick }: HowItWorksProps) {
   return (
     <section className="py-20 lg:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-t border-slate-200/80" id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-50/90 text-blue-800 border border-blue-200/80 px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase mb-4 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             <span>Simple 3-Step Process</span>
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight mb-4">
             How It Works
           </h2>
-          
+
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Three simple steps from initial rate comparison to securing your contracted fixed returns.
           </p>
@@ -107,7 +107,7 @@ export default function HowItWorks({ onCtaClick }: HowItWorksProps) {
               onClick={onCtaClick}
               className="inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-900 to-slate-900 hover:from-blue-800 hover:to-slate-800 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 text-sm sm:text-base"
             >
-              <span>Compare Top 8.20% Rates Now</span>
+              <span>Compare Top 8.1% Rates Now</span>
               <ArrowRight className="w-4 h-4" />
             </button>
             <p className="text-xs text-slate-500 mt-2.5">

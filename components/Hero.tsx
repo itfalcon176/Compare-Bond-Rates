@@ -2,16 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ShieldCheck, 
-  Award, 
-  Users, 
-  CheckCircle2, 
-  TrendingUp, 
-  Lock, 
-  Star, 
-  Sparkles, 
-  Zap, 
+import {
+  ShieldCheck,
+  Award,
+  Users,
+  CheckCircle2,
+  TrendingUp,
+  Lock,
+  Star,
+  Sparkles,
+  Zap,
   ArrowRight,
   Landmark,
   PiggyBank,
@@ -30,12 +30,12 @@ interface HeroProps {
 export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefillTerm }: HeroProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-teal-900 text-white pt-10 pb-16 lg:pt-16 lg:pb-24 shadow-inner">
-      
+
       {/* Dynamic Animated Background Mesh & Moving Bond Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        
+
         {/* Subtle Tech Grid Pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`,
@@ -44,7 +44,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
         />
 
         {/* Ambient Glowing Gradient Orbs with continuous slow drift */}
-        <motion.div 
+        <motion.div
           animate={{
             x: [0, 50, -30, 0],
             y: [0, -40, 20, 0],
@@ -58,7 +58,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
           className="absolute -top-24 -left-24 w-[600px] h-[600px] bg-blue-600/35 rounded-full blur-3xl"
         />
 
-        <motion.div 
+        <motion.div
           animate={{
             x: [0, -60, 40, 0],
             y: [0, 40, -30, 0],
@@ -72,7 +72,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
           className="absolute top-1/3 -right-24 w-[550px] h-[550px] bg-emerald-500/25 rounded-full blur-3xl"
         />
 
-        <motion.div 
+        <motion.div
           animate={{
             x: [0, 40, -40, 0],
             y: [0, -30, 30, 0],
@@ -89,7 +89,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
         {/* ============================================================== */}
         {/* ANIMATED MOVING BOND CARDS & TICKER BADGES IN THE BACKGROUND */}
         {/* ============================================================== */}
-        
+
         {/* 1. Moving Floating Bond Card 1 (Top Left) */}
         <motion.div
           animate={{
@@ -139,7 +139,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
           </div>
           <div className="text-left">
             <div className="text-xs font-bold text-white">FSCS Protected Deposit</div>
-            <span className="text-[10px] text-blue-200 block">Up to £120,000 Guaranteed</span>
+            <span className="text-[10px] text-blue-200 block">Up to £120,000 FSCS Protected</span>
           </div>
         </motion.div>
 
@@ -183,8 +183,8 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
         </motion.div>
 
         {/* Animated Moving SVG Yield Curve Waves */}
-        <svg 
-          className="absolute inset-0 w-full h-full opacity-15" 
+        <svg
+          className="absolute inset-0 w-full h-full opacity-15"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           viewBox="0 0 1200 600"
@@ -225,7 +225,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
+
           {/* Left Content Column */}
           <div className="lg:col-span-7 space-y-6">
             {/* Top Pill with Pulsing Live Dot */}
@@ -242,14 +242,14 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
 
             {/* Main Clean Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-5xl font-extrabold font-display text-white tracking-tight leading-[1.18] max-w-xl">
-              Guaranteed High-Yield <br />
+              Market-Leading High-Yield <br />
               <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-white bg-clip-text text-transparent">
                 UK Fixed-Rate Bonds
               </span>
             </h1>
 
             {/* Premium Rate Highlight Card with Glass Effect & Hover Animation */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.015, y: -2 }}
               transition={{ duration: 0.2 }}
               className="inline-flex items-center gap-3.5 bg-white/15 backdrop-blur-md border border-white/25 px-5 py-3.5 rounded-2xl shadow-lg"
@@ -259,7 +259,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
               </div>
               <div>
                 <div className="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
-                  <span>Contracted Yields Up to 8.20% p.a.</span>
+                  <span>Contracted Yields Up to 8.1% p.a.</span>
                   <span className="text-[11px] font-bold text-emerald-950 bg-emerald-300 px-2 py-0.5 rounded-full">
                     Fixed Coupon
                   </span>
@@ -272,7 +272,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
 
             {/* Description */}
             <p className="text-sm sm:text-base lg:text-lg text-blue-100/90 leading-relaxed max-w-xl">
-              Access wholesale fixed-term bonds with contracted returns up to 8.20% p.a. Complete capital preservation, statutory FSCS protection up to £120k, and 100% independent market intelligence.
+              Access wholesale fixed-term bonds with contracted returns up to 8.1% p.a. Complete capital preservation, statutory FSCS protection up to £120k, and 100% independent market intelligence.
             </p>
 
             {/* 4 Trust Feature Pills in website glass style */}
@@ -313,11 +313,11 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
           </div>
 
           {/* Right Lead Form Column with Elevated Glass Glow */}
-          <div 
+          <div
             id="lead-form-section"
             className="lg:col-span-5"
           >
-            <LeadForm 
+            <LeadForm
               onSuccess={onSuccessLead}
               onOpenLegal={onOpenLegal}
               initialAmount={prefillAmount}

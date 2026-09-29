@@ -22,24 +22,24 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
   return (
     <footer className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* 4 Columns Top Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          
+
           {/* Col 1: About */}
           <div className="space-y-4">
             <Link href="/" className="inline-block px-1 py-1 border-0 shadow-none outline-none">
               <Image
-                src="/assets/footr-logo.png"
+                src="/assets/logo/logo white (2).png"
                 alt="Compare Bond Rates UK"
                 width={280}
                 height={80}
                 className="logo-img-clean w-[200px] sm:w-[240px] h-auto object-contain"
               />
             </Link>
-            
+
             <p className="text-xs text-slate-400 leading-relaxed">
-              The UK's premier independent fixed-income intelligence and bond comparison platform. Connecting individual investors, retirees, and corporate treasuries directly with wholesale institutional yields up to 8.20% p.a. and statutory FSCS protection.
+              The UK's premier independent fixed-income intelligence and bond comparison platform. Connecting individual investors, retirees, and corporate treasuries directly with wholesale institutional yields up to 8.1% p.a. and statutory FSCS protection.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
             <Link href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
             <Link href="/terms-and-conditions" className="hover:text-emerald-400 transition-colors">Terms &amp; Conditions</Link>
             <Link href="/cookie-policy" className="hover:text-emerald-400 transition-colors">Cookie Policy</Link>
-            <button 
+            <button
               type="button"
               onClick={() => {
                 if (typeof window !== 'undefined') {

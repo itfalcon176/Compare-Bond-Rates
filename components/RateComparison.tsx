@@ -108,7 +108,7 @@ export default function RateComparison({ onSelectRate }: RateComparisonProps) {
             Compare Today's Top Fixed-Rate Bonds
           </h2>
           <p className="text-base text-slate-600">
-            Guaranteed returns backed by leading UK financial institutions. Verified daily for maximum yield.
+            Market-leading fixed returns backed by leading UK financial institutions. Verified daily for maximum yield.
           </p>
         </div>
 

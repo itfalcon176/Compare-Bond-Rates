@@ -13,7 +13,7 @@ export default function CtaBanner({ onCtaClick }: CtaBannerProps) {
     <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden bg-gradient-to-r from-slate-950 via-blue-950 to-slate-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl">
-          
+
           {/* Subtle Glows */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -28,7 +28,7 @@ export default function CtaBanner({ onCtaClick }: CtaBannerProps) {
                 Discover the UK's Best Bond Rates Today
               </h2>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                Join over 15,000 satisfied investors securing guaranteed returns up to 8.20% p.a. Zero broker fees and 100% impartial guidance.
+                Join over 15,000 satisfied investors securing market-leading returns up to 8.1% p.a. Zero broker fees and 100% impartial guidance.
               </p>
             </div>
 

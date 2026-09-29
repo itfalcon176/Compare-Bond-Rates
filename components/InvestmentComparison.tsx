@@ -13,7 +13,7 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
     {
       product: "Fixed Rate Bonds",
       highlight: true,
-      returnVal: "Up to 8.20% p.a.",
+      returnVal: "Up to 8.1% p.a.",
       risk: "Low",
       fscs: true,
       fixedRate: true,
@@ -97,7 +97,7 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
   return (
     <section className="py-20 lg:py-24 bg-white border-t border-slate-200/80" id="investment-comparison">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 border border-blue-200/80 px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase mb-3.5">
@@ -108,7 +108,7 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight mb-4">
             Investment Products Compared
           </h2>
-          
+
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             See how UK fixed rate bonds stack up against other popular savings and investment options.
           </p>
@@ -133,11 +133,10 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
                 {comparisonData.map((row, idx) => (
                   <tr
                     key={idx}
-                    className={`transition-colors duration-150 ${
-                      row.highlight
-                        ? 'bg-emerald-50/40 border-l-4 border-l-emerald-500 font-medium'
-                        : 'hover:bg-slate-50/80'
-                    }`}
+                    className={`transition-colors duration-150 ${row.highlight
+                      ? 'bg-emerald-50/40 border-l-4 border-l-emerald-500 font-medium'
+                      : 'hover:bg-slate-50/80'
+                      }`}
                   >
                     {/* Product Name */}
                     <td className="py-4 px-5">
@@ -163,11 +162,10 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
                     {/* Risk Level */}
                     <td className="py-4 px-4 text-center">
                       <span
-                        className={`inline-block font-semibold px-2.5 py-0.5 rounded-full text-xs ${
-                          row.risk === 'Low'
-                            ? 'text-emerald-700 bg-emerald-50'
-                            : 'text-amber-800 bg-amber-50'
-                        }`}
+                        className={`inline-block font-semibold px-2.5 py-0.5 rounded-full text-xs ${row.risk === 'Low'
+                          ? 'text-emerald-700 bg-emerald-50'
+                          : 'text-amber-800 bg-amber-50'
+                          }`}
                       >
                         {row.risk}
                       </span>
@@ -211,7 +209,7 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
               onClick={onCtaClick}
               className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all text-sm"
             >
-              <span>Lock In Up to 8.20% Fixed Returns</span>
+              <span>Lock In Up to 8.1% Fixed Returns</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

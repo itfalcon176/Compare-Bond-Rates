@@ -21,21 +21,21 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: 'UK Fixed-Rate Bonds & Sovereign Yields | Independent Rate Comparison',
   description:
-    'Access market-leading UK fixed-rate bonds and fixed deposits with contracted yields up to 8.20% p.a., FSCS protection up to £120,000, and comprehensive yield cashflow simulation.',
+    'Access market-leading UK fixed-rate bonds and fixed deposits with contracted yields up to 8.1% p.a., FSCS protection up to £120,000, and comprehensive yield cashflow simulation.',
   keywords:
     'UK Fixed Rate Bonds, Sovereign Gilts UK, High Yield Fixed Deposits, FSCS Protected Bonds 2026, Fixed Income Comparison UK',
   authors: [{ name: 'Compare Bond Rates Limited' }],
   openGraph: {
     title: 'UK Fixed-Rate Bonds & Sovereign Yields | CompareBondRates.co.uk',
     description:
-      'Discover wholesale institutional fixed-rate bonds up to 8.20% p.a. 100% free impartial service with FSCS statutory protection.',
+      'Discover wholesale institutional fixed-rate bonds up to 8.1% p.a. 100% free impartial service with FSCS statutory protection.',
     url: 'https://comparebondrates.co.uk',
     siteName: 'Compare Bond Rates UK',
     locale: 'en_GB',
     type: 'website',
   },
   icons: {
-    icon: '/assets/new-logo.png',
+    icon: '/assets/logo/logo (6).png',
   },
 };
 

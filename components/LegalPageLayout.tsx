@@ -89,7 +89,7 @@ export default function LegalPageLayout({
             className="inline-flex items-center p-0 m-0 border-0 shadow-none outline-none bg-transparent flex-shrink-0"
           >
             <Image
-              src="/assets/new-logo.png"
+              src="/assets/logo/logo (6).png"
               alt="Compare Bond Rates UK"
               width={340}
               height={120}

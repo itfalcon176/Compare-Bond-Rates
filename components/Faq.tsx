@@ -13,7 +13,7 @@ export default function Faq({ onCtaClick }: FaqProps) {
 
   const faqs = [
     {
-      q: "How are fixed-rate bond coupon yields (up to 8.20% p.a.) guaranteed?",
+      q: "How are fixed-rate bond coupon yields (up to 8.1% p.a.) secured?",
       a: "Fixed-rate bonds are legally binding debt instruments issued by authorized UK financial institutions and corporate entities. Once you lock in your allocation, the issuing institution is contractually obligated to pay your fixed interest rate for the entire agreed term, completely unaffected by Bank of England base rate adjustments or financial market volatility.",
     },
     {
@@ -30,7 +30,7 @@ export default function Faq({ onCtaClick }: FaqProps) {
     },
     {
       q: "Can I choose between monthly cash income and compounded growth at maturity?",
-      a: "Yes. Most featured fixed-rate products offer tailored payout schedules. You can select guaranteed monthly passive income paid directly into your UK bank account on a set date, quarterly disbursements, or annual compounding at maturity to maximize total cumulative profit.",
+      a: "Yes. Most featured fixed-rate products offer tailored payout schedules. You can select predictable monthly passive income paid directly into your UK bank account on a set date, quarterly disbursements, or annual compounding at maturity to maximize total cumulative profit.",
     },
     {
       q: "Are these fixed-rate bonds eligible for SIPP, SSAS, or ISA tax wrappers?",
@@ -61,7 +61,7 @@ export default function Faq({ onCtaClick }: FaqProps) {
   return (
     <section className="py-20 bg-slate-50 border-b border-slate-200" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Icon + Titles */}
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3.5 py-1 rounded-full text-xs font-bold mb-3 shadow-sm">
@@ -83,11 +83,10 @@ export default function Faq({ onCtaClick }: FaqProps) {
             return (
               <div
                 key={idx}
-                className={`border rounded-2xl transition-all duration-200 overflow-hidden ${
-                  isOpen 
-                    ? 'border-emerald-400 bg-white shadow-md' 
+                className={`border rounded-2xl transition-all duration-200 overflow-hidden ${isOpen
+                    ? 'border-emerald-400 bg-white shadow-md'
                     : 'border-slate-200 bg-white hover:border-slate-300'
-                }`}
+                  }`}
               >
                 <button
                   type="button"

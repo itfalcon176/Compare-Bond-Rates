@@ -67,7 +67,7 @@ export default function ReturnsCalculator({ onApplyRate }: ReturnsCalculatorProp
             Fixed-Yield &amp; Cashflow Simulator
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Simulate your contractually guaranteed returns across 1 to 5-year fixed terms. Compare monthly income payouts against compounded maturity growth in real time.
+            Simulate your fixed-income returns across 1 to 5-year fixed terms. Compare monthly income payouts against compounded maturity growth in real time.
           </p>
         </div>
 

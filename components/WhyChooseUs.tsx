@@ -61,7 +61,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
 
   const beatOtherCards = [
     {
-      title: "Guaranteed Returns",
+      title: "Predictable Fixed Returns",
       desc: "Unlike stocks, your returns are fixed and protected throughout the investment term.",
     },
     {
@@ -142,7 +142,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
                 9 Years Trust
               </div>
               <div className="absolute bottom-3 right-3 bg-emerald-500 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
-                Up to 8.20% Fixed
+                Up to 8.1% Fixed
               </div>
 
               <div className="text-center py-6 space-y-2">
@@ -150,7 +150,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
                   Institutional Security
                 </span>
                 <h4 className="text-2xl sm:text-3xl font-extrabold font-display">
-                  Guaranteed Wealth Preservation
+                  Secure Wealth Preservation
                 </h4>
                 <p className="text-xs text-slate-300 max-w-sm mx-auto">
                   Trusted by UK retirees, wealth managers, and individual investors across Britain.

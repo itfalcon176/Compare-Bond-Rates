@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         <div className="bg-emerald-50/60 border border-emerald-200/80 rounded-2xl p-5 text-emerald-950 flex items-start gap-3.5">
           <ShieldCheck className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm leading-relaxed">
-            <strong>Your Privacy is Guaranteed:</strong> Compare Bond Rates Limited is committed to protecting your personal information. We operate strictly in compliance with the UK General Data Protection Regulation (UK GDPR) and Data Protection Act 2018. We never sell your details to unaffiliated third-party marketing brokers.
+            <strong>Your Privacy is Protected:</strong> Compare Bond Rates Limited is committed to protecting your personal information. We operate strictly in compliance with the UK General Data Protection Regulation (UK GDPR) and Data Protection Act 2018. We never sell your details to unaffiliated third-party marketing brokers.
           </div>
         </div>
 
