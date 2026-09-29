@@ -258,59 +258,14 @@ function handleFormSubmit(event) {
   }
 
   const submitBtn = document.getElementById('submitLeadBtn');
-  const originalBtnContent = submitBtn.innerHTML;
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = '<span>Sending SMS Verification...</span>';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Matching Best Rates...</span>';
+  }
 
   setTimeout(() => {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = originalBtnContent;
-
-    // Show verification modal
-    const modal = document.getElementById('quoteModal');
-    const phonePreview = document.getElementById('modalPhonePreview');
-    const custName = document.getElementById('successCustomerName');
-
-    const formattedPhone = phone.startsWith('+44') ? phone : (phone.startsWith('0') ? `+44 ${phone.substring(1)}` : `+44 ${phone}`);
-    if (phonePreview) phonePreview.textContent = formattedPhone;
-    if (custName) custName.textContent = `${firstName} ${lastName}`;
-
-    // Generate fresh 4-digit OTP
-    currentExpectedOtp = generateOtpCode();
-
-    // Clear inputs and error
-    for (let i = 1; i <= 4; i++) {
-      const el = document.getElementById('otpDigit' + i);
-      if (el) el.value = '';
-    }
-
-    const errBox = document.getElementById('modalOtpError');
-    if (errBox) {
-      errBox.style.display = 'none';
-      errBox.textContent = '';
-    }
-
-    // Display simulated SMS notification toast
-    const toast = document.getElementById('modalSmsToast');
-    const toastText = document.getElementById('modalSmsToastText');
-    if (toast && toastText) {
-      toastText.textContent = `Your CompareBondRates security verification code is: ${currentExpectedOtp}`;
-      toast.style.display = 'flex';
-    }
-
-    // Start resend cooldown
-    startOtpCooldown();
-
-    document.getElementById('modalStepVerify').classList.add('active');
-    document.getElementById('modalStepSuccess').classList.remove('active');
-
-    modal.classList.add('open');
-
-    setTimeout(() => {
-      const first = document.getElementById('otpDigit1');
-      if (first) first.focus();
-    }, 300);
-  }, 700);
+    window.location.href = '/thank-you';
+  }, 400);
 }
 
 function closeQuoteModal() {

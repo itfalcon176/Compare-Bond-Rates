@@ -108,20 +108,8 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
     }
 
     setLoading(true);
-    if (onSuccess) {
-      onSuccess({
-        fullName,
-        email,
-        phone,
-        amount: selectedAmount,
-        term: selectedTerm,
-        timeframe: selectedTimeframe,
-      });
-    }
-    setTimeout(() => {
-      setLoading(false);
-      router.push('/thank-you');
-    }, 600);
+    // Directly navigate to /thank-you
+    router.push('/thank-you');
   };
 
   const progressPct = step === 1 ? 25 : step === 2 ? 50 : step === 3 ? 75 : 100;

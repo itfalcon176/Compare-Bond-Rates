@@ -10,15 +10,11 @@ import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
-import LeadModal from '@/components/LeadModal';
 import LegalModal from '@/components/LegalModal';
 import LeadFormModal from '@/components/LeadFormModal';
 
 export default function Home() {
   const [formModalOpen, setFormModalOpen] = useState(false);
-  const [leadModalOpen, setLeadModalOpen] = useState(false);
-  const [leadData, setLeadData] = useState<any>(null);
-
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalType, setLegalType] = useState<string | null>(null);
 
@@ -29,10 +25,8 @@ export default function Home() {
     setFormModalOpen(true);
   };
 
-  const handleLeadSuccess = (data: any) => {
+  const handleLeadSuccess = () => {
     setFormModalOpen(false);
-    setLeadData(data);
-    setLeadModalOpen(true);
   };
 
   const handleOpenLegal = (type: string) => {
@@ -94,13 +88,6 @@ export default function Home() {
         onOpenLegal={handleOpenLegal}
         initialAmount={prefillAmount}
         initialTerm={prefillTerm}
-      />
-
-      {/* Verification & Instant Match Confirmation Modal */}
-      <LeadModal 
-        isOpen={leadModalOpen}
-        onClose={() => setLeadModalOpen(false)}
-        leadData={leadData}
       />
 
       {/* Full Legal Policy Modal */}
