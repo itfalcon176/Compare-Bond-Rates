@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, 
@@ -13,7 +14,8 @@ import {
   Calendar,
   Zap,
   Sparkles,
-  Check
+  Check,
+  TrendingUp
 } from 'lucide-react';
 
 interface LeadFormProps {
@@ -31,6 +33,7 @@ interface LeadFormProps {
 }
 
 export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initialTerm }: LeadFormProps) {
+  const router = useRouter();
   const [step, setStep] = useState<number>(1);
   const [selectedAmount, setSelectedAmount] = useState<string>('£50,000 - £100,000');
   const [selectedTerm, setSelectedTerm] = useState<string>('2 Years');
@@ -39,7 +42,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [agree, setAgree] = useState(true);
+  const [agree, setAgree] = useState(false);
   const [loading, setLoading] = useState(false);
 
   // Sync if prefilled from calculator
@@ -105,8 +108,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
     }
 
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    if (onSuccess) {
       onSuccess({
         fullName,
         email,
@@ -115,7 +117,11 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
         term: selectedTerm,
         timeframe: selectedTimeframe,
       });
-    }, 700);
+    }
+    setTimeout(() => {
+      setLoading(false);
+      router.push('/thank-you');
+    }, 600);
   };
 
   const progressPct = step === 1 ? 25 : step === 2 ? 50 : step === 3 ? 75 : 100;
@@ -154,6 +160,20 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
             transition={{ duration: 0.3 }}
             className="h-full bg-white rounded-full"
           />
+        </div>
+      </div>
+
+      {/* Inside Form: Live Rate Ticker Banner */}
+      <div className="bg-emerald-50/90 border-b border-emerald-200/80 px-4 py-2.5 flex items-center justify-center gap-2 text-center text-xs">
+        <span className="flex h-2 w-2 relative flex-shrink-0">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+        </span>
+        <div className="flex items-center gap-1.5 flex-wrap justify-center font-semibold text-emerald-950">
+          <span>Today&apos;s best rate:</span>
+          <span className="font-extrabold text-emerald-700 text-xs sm:text-sm">8.1% P.A.</span>
+          <span className="text-emerald-300 font-normal">·</span>
+          <span className="text-emerald-800 font-medium">Updated 29 September 2026</span>
         </div>
       </div>
 
@@ -452,10 +472,10 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                     type="checkbox"
                     checked={agree}
                     onChange={(e) => setAgree(e.target.checked)}
-                    className="mt-0.5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 h-4 w-4"
+                    className="mt-0.5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 h-4 w-4 flex-shrink-0"
                     required
                   />
-                  <span className="text-[11px] leading-tight text-slate-500">
+                  <span className="text-[11px] leading-relaxed text-slate-500">
                     I agree to the{' '}
                     <Link
                       href="/privacy-policy"
@@ -474,7 +494,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                     >
                       Terms &amp; Conditions
                     </Link>
-                    .
+                    . Your information is secure and will never be shared with third parties.
                   </span>
                 </label>
               </div>

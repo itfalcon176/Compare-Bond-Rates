@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Clock, AlertTriangle, ShieldCheck, Landmark, Check
 
 interface FooterProps {
   onOpenLegal?: (type: string) => void;
-  onScrollToForm: () => void;
+  onScrollToForm?: () => void;
 }
 
 export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {

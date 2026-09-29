@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
       activeSlug="privacy-policy"
     >
       <div className="space-y-8">
-        
+
         {/* Intro Alert Box */}
         <div className="bg-emerald-50/60 border border-emerald-200/80 rounded-2xl p-5 text-emerald-950 flex items-start gap-3.5">
           <ShieldCheck className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
@@ -156,21 +156,7 @@ export default function PrivacyPolicyPage() {
           </div>
         </section>
 
-        {/* Section 7 */}
-        <section className="space-y-3 pt-2">
-          <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2.5 border-b border-slate-100 pb-3">
-            <span className="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center">7</span>
-            Contact Our Data Protection Officer
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            If you wish to exercise any of your statutory rights, or have questions concerning our privacy practices, please contact our Data Protection Officer:
-          </p>
-          <div className="bg-slate-900 text-slate-200 p-5 rounded-2xl space-y-2 text-xs sm:text-sm">
-            <p><strong>Email:</strong> privacy@comparebondrates.co.uk</p>
-            <p><strong>Telephone:</strong> 0203 890 4567</p>
-            <p><strong>Postal Address:</strong> Data Protection Officer, Compare Bond Rates Limited, 25 Moorgate, London EC2R 6AY.</p>
-          </div>
-        </section>
+
 
       </div>
     </LegalPageLayout>

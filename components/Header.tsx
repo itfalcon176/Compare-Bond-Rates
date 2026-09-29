@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight, Phone } from 'lucide-react';
 
 interface HeaderProps {
-  onCompareClick: () => void;
+  onCompareClick?: () => void;
 }
 
 export default function Header({ onCompareClick }: HeaderProps) {
@@ -72,7 +72,7 @@ export default function Header({ onCompareClick }: HeaderProps) {
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
-            onClick={onCompareClick}
+            onClick={() => onCompareClick ? onCompareClick() : (window.location.href = '/#form')}
             className="bg-blue-700 hover:bg-blue-800 text-white text-xs sm:text-sm font-extrabold px-5 sm:px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2"
           >
             <span>Compare The Market</span>
@@ -122,7 +122,11 @@ export default function Header({ onCompareClick }: HeaderProps) {
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onCompareClick();
+                  if (onCompareClick) {
+                    onCompareClick();
+                  } else {
+                    window.location.href = '/#form';
+                  }
                 }}
                 className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow text-center"
               >
