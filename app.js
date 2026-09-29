@@ -235,6 +235,14 @@ function selectBondQuote(bondName, suggestedAmount, termYears) {
 /* ==========================================================================
    Lead Form Submission & Verification Modal
    ========================================================================== */
+let currentExpectedOtp = '';
+let otpResendTimer = null;
+let otpCooldownSeconds = 0;
+
+function generateOtpCode() {
+  return Math.floor(1000 + Math.random() * 9000).toString();
+}
+
 function handleFormSubmit(event) {
   event.preventDefault();
 
@@ -252,7 +260,7 @@ function handleFormSubmit(event) {
   const submitBtn = document.getElementById('submitLeadBtn');
   const originalBtnContent = submitBtn.innerHTML;
   submitBtn.disabled = true;
-  submitBtn.innerHTML = '<span>Matching Top Bonds...</span>';
+  submitBtn.innerHTML = '<span>Sending SMS Verification...</span>';
 
   setTimeout(() => {
     submitBtn.disabled = false;
@@ -263,37 +271,161 @@ function handleFormSubmit(event) {
     const phonePreview = document.getElementById('modalPhonePreview');
     const custName = document.getElementById('successCustomerName');
 
-    if (phonePreview) phonePreview.textContent = phone.startsWith('+44') ? phone : `+44 ${phone}`;
+    const formattedPhone = phone.startsWith('+44') ? phone : (phone.startsWith('0') ? `+44 ${phone.substring(1)}` : `+44 ${phone}`);
+    if (phonePreview) phonePreview.textContent = formattedPhone;
     if (custName) custName.textContent = `${firstName} ${lastName}`;
+
+    // Generate fresh 4-digit OTP
+    currentExpectedOtp = generateOtpCode();
+
+    // Clear inputs and error
+    for (let i = 1; i <= 4; i++) {
+      const el = document.getElementById('otpDigit' + i);
+      if (el) el.value = '';
+    }
+
+    const errBox = document.getElementById('modalOtpError');
+    if (errBox) {
+      errBox.style.display = 'none';
+      errBox.textContent = '';
+    }
+
+    // Display simulated SMS notification toast
+    const toast = document.getElementById('modalSmsToast');
+    const toastText = document.getElementById('modalSmsToastText');
+    if (toast && toastText) {
+      toastText.textContent = `Your CompareBondRates security verification code is: ${currentExpectedOtp}`;
+      toast.style.display = 'flex';
+    }
+
+    // Start resend cooldown
+    startOtpCooldown();
 
     document.getElementById('modalStepVerify').classList.add('active');
     document.getElementById('modalStepSuccess').classList.remove('active');
 
     modal.classList.add('open');
+
+    setTimeout(() => {
+      const first = document.getElementById('otpDigit1');
+      if (first) first.focus();
+    }, 300);
   }, 700);
 }
 
 function closeQuoteModal() {
   const modal = document.getElementById('quoteModal');
   modal.classList.remove('open');
+  if (otpResendTimer) clearInterval(otpResendTimer);
 }
 
 function confirmOtpVerification() {
+  const digits = [1, 2, 3, 4].map(i => {
+    const el = document.getElementById('otpDigit' + i);
+    return el ? el.value.trim() : '';
+  });
+
+  const entered = digits.join('');
+  const errBox = document.getElementById('modalOtpError');
+
+  if (entered.length < 4) {
+    if (errBox) {
+      errBox.textContent = 'Please enter the complete 4-digit code sent to your mobile.';
+      errBox.style.display = 'block';
+    }
+    const emptyIndex = digits.findIndex(d => !d);
+    const target = document.getElementById('otpDigit' + (emptyIndex !== -1 ? emptyIndex + 1 : 1));
+    if (target) target.focus();
+    return;
+  }
+
+  if (entered !== currentExpectedOtp) {
+    if (errBox) {
+      errBox.textContent = 'Incorrect code. Please enter the 4-digit code sent to your phone.';
+      errBox.style.display = 'block';
+    }
+    return;
+  }
+
+  // Success
+  if (errBox) errBox.style.display = 'none';
   document.getElementById('modalStepVerify').classList.remove('active');
   document.getElementById('modalStepSuccess').classList.add('active');
 }
 
 function moveOtp(currentInput, index) {
-  if (currentInput.value.length >= 1) {
-    const next = currentInput.nextElementSibling;
-    if (next && next.classList.contains('otp-digit')) {
-      next.focus();
+  // Only keep numeric character
+  currentInput.value = currentInput.value.replace(/\D/g, '').slice(-1);
+
+  const errBox = document.getElementById('modalOtpError');
+  if (errBox) errBox.style.display = 'none';
+
+  if (currentInput.value.length >= 1 && index < 4) {
+    const next = document.getElementById('otpDigit' + (index + 1));
+    if (next) next.focus();
+  }
+}
+
+function handleOtpKey(event, currentInput, index) {
+  if (event.key === 'Backspace' && !currentInput.value && index > 1) {
+    const prev = document.getElementById('otpDigit' + (index - 1));
+    if (prev) prev.focus();
+  } else if (event.key === 'Enter') {
+    confirmOtpVerification();
+  }
+}
+
+function startOtpCooldown() {
+  otpCooldownSeconds = 30;
+  updateResendLink();
+
+  if (otpResendTimer) clearInterval(otpResendTimer);
+  otpResendTimer = setInterval(() => {
+    otpCooldownSeconds--;
+    if (otpCooldownSeconds <= 0) {
+      clearInterval(otpResendTimer);
     }
+    updateResendLink();
+  }, 1000);
+}
+
+function updateResendLink() {
+  const link = document.getElementById('resendSmsLink');
+  if (!link) return;
+
+  if (otpCooldownSeconds > 0) {
+    link.textContent = `Resend SMS (${otpCooldownSeconds}s)`;
+    link.style.pointerEvents = 'none';
+    link.style.opacity = '0.6';
+  } else {
+    link.textContent = 'Resend SMS';
+    link.style.pointerEvents = 'auto';
+    link.style.opacity = '1';
   }
 }
 
 function resendOtp() {
-  alert('A new SMS verification code has been dispatched.');
+  if (otpCooldownSeconds > 0) return;
+
+  currentExpectedOtp = generateOtpCode();
+
+  for (let i = 1; i <= 4; i++) {
+    const el = document.getElementById('otpDigit' + i);
+    if (el) el.value = '';
+  }
+
+  const errBox = document.getElementById('modalOtpError');
+  if (errBox) errBox.style.display = 'none';
+
+  const toastText = document.getElementById('modalSmsToastText');
+  if (toastText) {
+    toastText.textContent = `New verification code dispatched: ${currentExpectedOtp}`;
+  }
+
+  startOtpCooldown();
+
+  const first = document.getElementById('otpDigit1');
+  if (first) first.focus();
 }
 
 /* ==========================================================================

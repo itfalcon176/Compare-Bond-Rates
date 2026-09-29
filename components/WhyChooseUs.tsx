@@ -4,6 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ShieldCheck,
+  Landmark,
+  Scale,
+  BadgePercent,
   Award,
   TrendingUp,
   Users,
@@ -20,26 +23,30 @@ interface WhyChooseUsProps {
 }
 
 export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
-  const stats = [
+  const whyChooseCards = [
     {
-      icon: TrendingUp,
-      title: "Access to Exclusive Rates",
-      desc: "Exclusive institutional rates not available to individual investors",
-    },
-    {
-      icon: Award,
-      title: "Award Winning Service",
-      desc: "Winner of Best Bond Service 2024 - Money Marketing Awards",
+      icon: Landmark,
+      title: "FCA-Regulated Providers",
+      desc: "Every banking institution and issuing partner we compare is fully authorised and regulated by the Financial Conduct Authority.",
+      badge: "FCA Authorised"
     },
     {
       icon: ShieldCheck,
-      title: "£2.5B+ Placed",
-      desc: "Successfully placed over £2.5 billion in client investments",
+      title: "FSCS Protection",
+      desc: "Eligible deposits are safeguarded under the Financial Services Compensation Scheme up to statutory limits of £120,000.",
+      badge: "Up to £120,000 Covered"
     },
     {
-      icon: Users,
-      title: "15,000+ Happy Clients",
-      desc: "Trusted by thousands of investors across the United Kingdom",
+      icon: Scale,
+      title: "Independent Comparison",
+      desc: "We're not tied to any single provider — our market recommendations are determined entirely by rates and security, not commissions.",
+      badge: "100% Unbiased"
+    },
+    {
+      icon: BadgePercent,
+      title: "100% Free Service",
+      desc: "There is no cost to use Compare Bond Rates. Compare rates, evaluate options, and secure allocations at zero charge.",
+      badge: "No Broker Fees"
     },
   ];
 
@@ -75,38 +82,46 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
     <section className="py-20 bg-white" id="why-us">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header Icon + Titles */}
+        {/* Header Icon + Titles matching reference screenshot */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="w-14 h-14 bg-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-            <HelpCircle className="w-6 h-6" />
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 border border-blue-200/80 px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase mb-3.5">
+            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+            <span>Why Choose Us</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-3">
-            Why Choose Compare Bond Rates?
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight mb-3.5">
+            Why Choose Compare Bond Rates
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Providing direct access to wholesale institutional bond markets, statutory FSCS capital protection, and contracted fixed yields up to 8.20% p.a. with 100% impartial UK comparison.
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            Built for UK savers who want better returns without unnecessary risk.
           </p>
         </div>
 
-        {/* 4 Feature Stats Cards */}
+        {/* 4 Feature Cards in single row matching user screenshot */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {stats.map((item, idx) => {
+          {whyChooseCards.map((item, idx) => {
             const Icon = item.icon;
             return (
               <motion.div
                 key={idx}
-                whileHover={{ y: -4 }}
-                className="bg-white border border-slate-200/90 rounded-3xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center"
+                whileHover={{ y: -5 }}
+                className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl p-7 text-left shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
-                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6" />
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-amber-50/90 border border-amber-200/70 text-amber-600 flex items-center justify-center mb-5 group-hover:scale-105 group-hover:bg-amber-100/90 transition-all duration-300">
+                    <Icon className="w-6 h-6 stroke-[1.9]" />
+                  </div>
+                  <h3 className="font-bold font-display text-slate-900 text-lg mb-2.5 group-hover:text-blue-950 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="font-extrabold text-slate-900 text-base mb-1.5">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  {item.desc}
-                </p>
+                <div className="pt-3 border-t border-slate-100">
+                  <span className="inline-block text-[10px] font-extrabold uppercase tracking-wide text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/60">
+                    {item.badge}
+                  </span>
+                </div>
               </motion.div>
             );
           })}
