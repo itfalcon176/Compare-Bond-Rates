@@ -653,55 +653,102 @@ src="https://www.facebook.com/tr?id=1121433652562772&ev=PageView&noscript=1"
         </div>
       </div>
 
-      <!-- Comparison Matrix Table -->
-      <div class="matrix-card">
-        <h3 class="matrix-title">How CompareBondRates Stacks Up</h3>
+      <!-- Investment Products Compared Table Section -->
+      <div class="matrix-card" id="investment-comparison">
+        <div class="text-center" style="margin-bottom: 28px;">
+          <h3 class="matrix-title" style="font-size: 1.8rem; margin-bottom: 8px;">Investment Products Compared</h3>
+          <p style="color: #94a3b8; font-size: 0.95rem; max-width: 650px; margin: 0 auto;">See how UK fixed rate bonds stack up against other popular savings and investment options.</p>
+        </div>
+        
         <div class="table-responsive">
-          <table class="comparison-matrix-table">
+          <table class="comparison-matrix-table products-compared-table">
             <thead>
               <tr>
-                <th>Investment Option</th>
-                <th>Typical Annual Return</th>
-                <th>Capital Protection</th>
-                <th>Income Predictability</th>
-                <th>Investor Fees</th>
+                <th>Product</th>
+                <th class="text-center">Typical Return</th>
+                <th class="text-center">Risk</th>
+                <th class="text-center">FSCS Protected</th>
+                <th class="text-center">Fixed Rate</th>
+                <th class="text-center">Access</th>
+                <th class="text-center">Beats Inflation</th>
               </tr>
             </thead>
             <tbody>
+              <!-- Row 1: Fixed Rate Bonds (Featured) -->
               <tr class="highlight-row">
                 <td>
-                  <strong>CompareBondRates.co.uk</strong>
-                  <span class="pill-badge-table">Recommended</span>
+                  <strong>Fixed Rate Bonds</strong>
+                  <span class="pill-badge-table">Featured</span>
                 </td>
-                <td><strong class="text-emerald font-bold">7.45% - 8.20% Fixed</strong></td>
-                <td><span class="badge-success">FSCS Covered (up to £120k)</span></td>
-                <td><span class="badge-success">100% Guaranteed</span></td>
-                <td><strong class="text-emerald">£0 (100% Free)</strong></td>
+                <td class="text-center"><strong class="text-emerald font-bold">Up to 8.20% p.a.</strong></td>
+                <td class="text-center"><span class="badge-risk-low">Low</span></td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
+                <td class="text-center"><strong>Fixed term</strong></td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
               </tr>
+
+              <!-- Row 2: Easy Access Savings -->
               <tr>
-                <td>High Street Savings Accounts</td>
-                <td>3.00% - 4.50% Variable</td>
-                <td>FSCS Covered</td>
-                <td>Subject to Bank of England rate cuts</td>
-                <td>£0</td>
+                <td>Easy Access Savings</td>
+                <td class="text-center">~3.5% p.a.</td>
+                <td class="text-center"><span class="badge-risk-low">Low</span></td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
+                <td class="text-center">Anytime</td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
               </tr>
+
+              <!-- Row 3: Cash ISA -->
               <tr>
-                <td>Stock Market (FTSE 100 / S&P)</td>
-                <td>Uncertain / Volatile</td>
-                <td><span class="badge-danger">Capital at Risk (No FSCS)</span></td>
-                <td>Unpredictable dividends</td>
-                <td>0.5% - 2.0% Annual Management</td>
+                <td>Cash ISA</td>
+                <td class="text-center">~4.5% p.a.</td>
+                <td class="text-center"><span class="badge-risk-low">Low</span></td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
+                <td class="text-center"><span class="symbol-dash">—</span></td>
+                <td class="text-center">Anytime</td>
+                <td class="text-center"><span class="symbol-dash">—</span></td>
               </tr>
+
+              <!-- Row 4: Stocks & Shares -->
               <tr>
-                <td>Peer-to-Peer / Unregulated Notes</td>
-                <td>6.00% - 10.00%</td>
-                <td><span class="badge-danger">No Statutory Protection</span></td>
-                <td>High default risk</td>
-                <td>Varies</td>
+                <td>Stocks &amp; Shares</td>
+                <td class="text-center">Variable</td>
+                <td class="text-center"><span class="badge-risk-high">High</span></td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
+                <td class="text-center">Anytime</td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
+              </tr>
+
+              <!-- Row 5: Premium Bonds -->
+              <tr>
+                <td>Premium Bonds</td>
+                <td class="text-center">~4.0% avg</td>
+                <td class="text-center"><span class="badge-risk-low">Low</span></td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
+                <td class="text-center">Anytime</td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
+              </tr>
+
+              <!-- Row 6: Buy-to-Let Property -->
+              <tr>
+                <td>Buy-to-Let Property</td>
+                <td class="text-center">~5–7% yield</td>
+                <td class="text-center"><span class="badge-risk-high">High</span></td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
+                <td class="text-center"><span class="symbol-cross">✕</span></td>
+                <td class="text-center">Illiquid</td>
+                <td class="text-center"><span class="symbol-check">✓</span></td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <p class="comparison-disclaimer-note">
+          Indicative figures based on publicly available UK market data. Returns vary by provider, term, and personal eligibility. Capital may be at risk for non-FSCS products.
+        </p>
       </div>
     </div>
   </section>

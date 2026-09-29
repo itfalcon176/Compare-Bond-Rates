@@ -1080,3 +1080,143 @@ a {
   color: #94a3b8;
 }
 
+/* ==========================================================================
+   Investment Products Compared Table
+   ========================================================================== */
+.matrix-card {
+  background: rgba(7, 15, 36, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  margin-top: 48px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.products-compared-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  min-width: 680px;
+}
+
+.products-compared-table thead th {
+  background: #0c1a3b;
+  color: #ffffff;
+  padding: 16px 14px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.products-compared-table tbody td {
+  padding: 15px 14px;
+  font-size: 0.86rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  vertical-align: middle;
+}
+
+.products-compared-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.products-compared-table tbody tr.highlight-row td {
+  background: rgba(245, 158, 11, 0.08);
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.products-compared-table tbody tr.highlight-row td:first-child {
+  border-left: 3px solid #f59e0b;
+}
+
+.pill-badge-table {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  margin-left: 8px;
+  vertical-align: middle;
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.badge-risk-low {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-risk-high {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.symbol-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.symbol-cross {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.symbol-dash {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: #64748b;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.comparison-disclaimer-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 18px;
+  line-height: 1.5;
+}
+
