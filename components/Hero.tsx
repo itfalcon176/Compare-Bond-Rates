@@ -275,59 +275,23 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
               Access wholesale fixed-term bonds with contracted returns up to 8.20% p.a. Complete capital preservation, statutory FSCS protection up to £120k, and 100% independent market intelligence.
             </p>
 
-            {/* 3 Value Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-2.5 rounded-xl text-white">
+            {/* 4 Trust Feature Pills in website glass style */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-2">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-2.5 rounded-xl text-white shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-xs font-bold">100% Impartial &amp; Free</span>
+                <span className="text-xs font-bold whitespace-nowrap">FSCS Protection</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-2.5 rounded-xl text-white">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-2.5 rounded-xl text-white shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-xs font-bold">No Broker Fees</span>
+                <span className="text-xs font-bold whitespace-nowrap">FCA Regulated</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-2.5 rounded-xl text-white">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-2.5 rounded-xl text-white shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span className="text-xs font-bold">Instant Online Quote</span>
+                <span className="text-xs font-bold whitespace-nowrap">Rates Up to 8.1% p.a.</span>
               </div>
-            </div>
-
-            {/* Trust Footer Highlights */}
-            <div className="flex flex-wrap items-center gap-6 pt-3 border-t border-white/15">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-emerald-400/20 border border-emerald-300/30 text-emerald-300 flex items-center justify-center font-bold text-xs flex-shrink-0">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs sm:text-sm font-bold text-white block">
-                    Statutory FSCS Backing
-                  </span>
-                  <span className="text-[11px] text-blue-200 block">
-                    Up to £120,000 Guarantee
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-teal-400/20 border border-teal-300/30 text-teal-300 flex items-center justify-center font-bold text-xs flex-shrink-0">
-                  <Users className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs sm:text-sm font-bold text-white block">
-                    14,200+ Portfolios Compared
-                  </span>
-                  <span className="text-[11px] text-blue-200 block">
-                    £2.5B+ Capital Analyzed
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-1.5 bg-amber-400/15 border border-amber-300/30 px-3 py-1.5 rounded-xl text-xs font-bold text-amber-300">
-                <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
-                  ))}
-                </div>
-                <span>4.9/5 Independent Score</span>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-2.5 rounded-xl text-white shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                <span className="text-xs font-bold whitespace-nowrap">18,000+ Happy Investors</span>
               </div>
             </div>
           </div>

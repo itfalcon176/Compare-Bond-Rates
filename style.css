@@ -400,17 +400,17 @@ a {
 
 .hero-trust-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .trust-pill {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 12px;
 }
 
@@ -418,12 +418,14 @@ a {
   color: var(--emerald-400);
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .trust-pill strong {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .trust-pill small {
