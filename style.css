@@ -804,3 +804,129 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================== */
+/* COOKIE CONSENT BANNER POPUP (MATCHING DESIGN REFERENCE) */
+/* ============================================================== */
+.cookie-banner-popup {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  max-width: 580px;
+  width: calc(100% - 48px);
+  z-index: 999999;
+  animation: slideUpCookie 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpCookie {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cookie-banner-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.22), 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 22px 24px;
+  color: #1e293b;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.cookie-banner-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.cookie-banner-icon {
+  color: #1e293b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cookie-banner-text {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.cookie-policy-link {
+  color: #b45309;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.cookie-policy-link:hover {
+  color: #92400e;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-cookie-accept {
+  background: #152349;
+  color: #ffffff;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(21, 35, 73, 0.15);
+}
+
+.btn-cookie-accept:hover {
+  background: #0d1733;
+  transform: translateY(-1px);
+}
+
+.btn-cookie-accept:active {
+  transform: scale(0.97);
+}
+
+.btn-cookie-essential {
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cookie-essential:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.btn-cookie-essential:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 640px) {
+  .cookie-banner-popup {
+    bottom: 16px;
+    left: 16px;
+    width: calc(100% - 32px);
+  }
+  .cookie-banner-card {
+    padding: 18px 18px;
+  }
+}
+

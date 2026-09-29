@@ -162,6 +162,17 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
             <Link href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
             <Link href="/terms-and-conditions" className="hover:text-emerald-400 transition-colors">Terms &amp; Conditions</Link>
             <Link href="/cookie-policy" className="hover:text-emerald-400 transition-colors">Cookie Policy</Link>
+            <button 
+              type="button"
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  window.dispatchEvent(new Event('open-cookie-banner'));
+                }
+              }}
+              className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+            >
+              Cookie Preferences
+            </button>
             <Link href="/complaints-policy" className="hover:text-emerald-400 transition-colors">Complaints Policy</Link>
             <Link href="/modern-slavery-statement" className="hover:text-emerald-400 transition-colors">Modern Slavery Statement</Link>
           </div>

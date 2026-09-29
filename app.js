@@ -416,3 +416,47 @@ function formatCurrencyDecimal(num) {
     maximumFractionDigits: 2
   });
 }
+
+/* ==========================================================================
+   Cookie Consent Banner Management
+   ========================================================================== */
+function initCookieBanner() {
+  const consent = localStorage.getItem('cbr_cookie_consent');
+  const banner = document.getElementById('cookieBannerPopup');
+  if (!banner) return;
+  if (!consent) {
+    setTimeout(() => {
+      banner.style.display = 'block';
+    }, 700);
+  }
+}
+
+function acceptAllCookies() {
+  localStorage.setItem('cbr_cookie_consent', 'all');
+  localStorage.setItem('cbr_cookie_consent_date', new Date().toISOString());
+  const banner = document.getElementById('cookieBannerPopup');
+  if (banner) banner.style.display = 'none';
+  if (typeof fbq === 'function') {
+    fbq('consent', 'grant');
+  }
+}
+
+function acceptEssentialCookies() {
+  localStorage.setItem('cbr_cookie_consent', 'essential');
+  localStorage.setItem('cbr_cookie_consent_date', new Date().toISOString());
+  const banner = document.getElementById('cookieBannerPopup');
+  if (banner) banner.style.display = 'none';
+  if (typeof fbq === 'function') {
+    fbq('consent', 'revoke');
+  }
+}
+
+function reopenCookieBanner() {
+  const banner = document.getElementById('cookieBannerPopup');
+  if (banner) banner.style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCookieBanner();
+});
+

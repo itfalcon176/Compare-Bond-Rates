@@ -92,7 +92,6 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
         
         {/* 1. Moving Floating Bond Card 1 (Top Left) */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
           animate={{
             opacity: [0.65, 0.9, 0.65],
             y: [0, -18, 0],
@@ -122,7 +121,6 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
 
         {/* 2. Moving Floating Bond Card 2 (Bottom Left) */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
           animate={{
             opacity: [0.6, 0.85, 0.6],
             y: [0, 20, 0],
@@ -229,12 +227,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* Left Content Column */}
-          <motion.div 
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 space-y-6"
-          >
+          <div className="lg:col-span-7 space-y-6">
             {/* Top Pill with Pulsing Live Dot */}
             <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-sm">
               <span className="flex h-2 w-2 relative">
@@ -337,14 +330,11 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
                 <span>4.9/5 Independent Score</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Lead Form Column with Elevated Glass Glow */}
-          <motion.div 
+          <div 
             id="lead-form-section"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5"
           >
             <LeadForm 
@@ -353,7 +343,7 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
               initialAmount={prefillAmount}
               initialTerm={prefillTerm}
             />
-          </motion.div>
+          </div>
 
         </div>
       </div>
