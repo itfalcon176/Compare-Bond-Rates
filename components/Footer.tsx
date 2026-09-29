@@ -11,6 +11,14 @@ interface FooterProps {
 }
 
 export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
+  const handleScroll = () => {
+    if (onScrollToForm) {
+      onScrollToForm();
+    } else {
+      window.location.href = '/#form';
+    }
+  };
+
   return (
     <footer className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,22 +50,22 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
-                <button type="button" onClick={onScrollToForm} className="hover:text-emerald-400 transition-colors">
+                <button type="button" onClick={handleScroll} className="hover:text-emerald-400 transition-colors">
                   Fixed Rate Bonds
                 </button>
               </li>
               <li>
-                <button type="button" onClick={onScrollToForm} className="hover:text-emerald-400 transition-colors">
+                <button type="button" onClick={handleScroll} className="hover:text-emerald-400 transition-colors">
                   Corporate Bonds
                 </button>
               </li>
               <li>
-                <button type="button" onClick={onScrollToForm} className="hover:text-emerald-400 transition-colors">
+                <button type="button" onClick={handleScroll} className="hover:text-emerald-400 transition-colors">
                   ISA Eligible Bonds
                 </button>
               </li>
               <li>
-                <button type="button" onClick={onScrollToForm} className="hover:text-emerald-400 transition-colors">
+                <button type="button" onClick={handleScroll} className="hover:text-emerald-400 transition-colors">
                   SIPP Pension Bonds
                 </button>
               </li>
