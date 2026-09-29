@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ReturnsCalculator from '@/components/ReturnsCalculator';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
@@ -65,7 +66,10 @@ export default function Home() {
         {/* 4. Why Choose Compare Bond Rates */}
         <WhyChooseUs onCtaClick={handleOpenFormModal} />
 
-        {/* 5. What Our Clients Say (Testimonials & Reviews) */}
+        {/* 5. How It Works (Simple 3-Step Process) */}
+        <HowItWorks onCtaClick={handleOpenFormModal} />
+
+        {/* 6. What Our Clients Say (Testimonials & Reviews) */}
         <Testimonials onCtaClick={handleOpenFormModal} />
 
         {/* 6. Frequently Asked Questions */}
