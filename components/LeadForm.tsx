@@ -528,7 +528,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
             <div className="flex -space-x-2">
               <div className="w-7 h-7 rounded-full bg-emerald-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-emerald-700">MT</div>
               <div className="w-7 h-7 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-blue-700">DC</div>
-              <div className="w-7 h-7 rounded-full bg-amber-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-amber-700">PW</div>
+              <div className="w-7 h-7 rounded-full bg-emerald-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-emerald-700">PW</div>
             </div>
             <p className="text-xs text-slate-600">
               <strong className="font-bold text-slate-900">11,750+</strong> investors compared this week

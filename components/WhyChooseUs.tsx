@@ -107,7 +107,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
                 className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl p-7 text-left shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-amber-50/90 border border-amber-200/70 text-amber-600 flex items-center justify-center mb-5 group-hover:scale-105 group-hover:bg-amber-100/90 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50/90 border border-emerald-200/70 text-emerald-600 flex items-center justify-center mb-5 group-hover:scale-105 group-hover:bg-emerald-100/90 transition-all duration-300">
                     <Icon className="w-6 h-6 stroke-[1.9]" />
                   </div>
                   <h3 className="font-bold font-display text-slate-900 text-lg mb-2.5 group-hover:text-blue-950 transition-colors">
@@ -118,7 +118,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
                   </p>
                 </div>
                 <div className="pt-3 border-t border-slate-100">
-                  <span className="inline-block text-[10px] font-extrabold uppercase tracking-wide text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/60">
+                  <span className="inline-block text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60">
                     {item.badge}
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default function WhyChooseUs({ onCtaClick }: WhyChooseUsProps) {
               <div className="absolute top-3 right-3 bg-blue-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
                 9 Years Trust
               </div>
-              <div className="absolute bottom-3 right-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
+              <div className="absolute bottom-3 right-3 bg-emerald-500 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
                 Up to 8.20% Fixed
               </div>
 

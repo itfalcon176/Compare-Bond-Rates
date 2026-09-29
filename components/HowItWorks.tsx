@@ -32,7 +32,7 @@ export default function HowItWorks({ onCtaClick }: HowItWorksProps) {
       title: "3. Lock In Your Guaranteed Rate",
       desc: "Choose the fixed bond that best suits your goals and apply directly with the authorized institution. Your capital is protected under statutory FSCS limits up to £120,000.",
       badge: "Rates Up to 8.20% • FSCS Protected",
-      badgeColor: "text-amber-700 bg-amber-50 border-amber-200/70"
+      badgeColor: "text-emerald-700 bg-emerald-50 border-emerald-200/70"
     },
   ];
 
@@ -74,7 +74,7 @@ export default function HowItWorks({ onCtaClick }: HowItWorksProps) {
 
                 <div>
                   {/* Circular Amber/Gold Icon Badge matching user image style */}
-                  <div className="w-16 h-16 rounded-full bg-amber-50/90 border border-amber-200/80 text-amber-600 flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-105 group-hover:bg-amber-100/90 group-hover:text-amber-700 transition-all duration-300">
+                  <div className="w-16 h-16 rounded-full bg-emerald-50/90 border border-emerald-200/80 text-emerald-600 flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-105 group-hover:bg-emerald-100/90 group-hover:text-emerald-700 transition-all duration-300">
                     <Icon className="w-7 h-7 stroke-[1.8]" />
                   </div>
 

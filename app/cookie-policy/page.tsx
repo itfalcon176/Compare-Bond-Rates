@@ -18,8 +18,8 @@ export default function CookiePolicyPage() {
       <div className="space-y-8">
         
         {/* Intro Alert Box */}
-        <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-5 text-amber-950 flex items-start gap-3.5">
-          <Cookie className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
+        <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-5 text-emerald-950 flex items-start gap-3.5">
+          <Cookie className="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm leading-relaxed">
             <strong>Transparent Tracking:</strong> We use cookies to enhance your navigation experience, retain your calculator inputs, and measure aggregate site performance. We never deploy intrusive cross-site advertising spyware or sell your tracking data.
           </div>

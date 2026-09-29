@@ -135,7 +135,7 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
                     key={idx}
                     className={`transition-colors duration-150 ${
                       row.highlight
-                        ? 'bg-[#fffcf2] border-l-4 border-l-amber-500 font-medium'
+                        ? 'bg-emerald-50/40 border-l-4 border-l-emerald-500 font-medium'
                         : 'hover:bg-slate-50/80'
                     }`}
                   >
@@ -146,7 +146,7 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
                           {row.product}
                         </span>
                         {row.highlight && (
-                          <span className="hidden sm:inline-block bg-amber-500/20 text-amber-800 border border-amber-400/40 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">
+                          <span className="hidden sm:inline-block bg-emerald-500/20 text-emerald-800 border border-emerald-400/40 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">
                             Featured
                           </span>
                         )}

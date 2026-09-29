@@ -79,8 +79,8 @@ export default function TermsAndConditionsPage() {
           <p className="text-sm text-slate-600 leading-relaxed">
             The content, calculator estimates, and comparisons displayed on CompareBondRates.co.uk are for <strong>informational, illustrative, and comparative purposes only</strong> and do not constitute direct regulated investment, tax, or legal advice under the Financial Services and Markets Act 2000 (FSMA).
           </p>
-          <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl text-xs sm:text-sm text-amber-950 flex items-start gap-2.5">
-            <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-xs sm:text-sm text-emerald-950 flex items-start gap-2.5">
+            <AlertTriangle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
             <p>
               Before committing capital to any fixed-term bond, note or cash deposit, investors must carefully review the issuer&apos;s complete Information Memorandum, prospectus, and terms. If you are uncertain about whether a product is suitable for your individual circumstances, you should seek advice from an independent financial adviser (IFA) authorised by the Financial Conduct Authority (FCA).
             </p>

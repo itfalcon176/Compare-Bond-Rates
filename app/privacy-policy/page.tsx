@@ -109,8 +109,8 @@ export default function PrivacyPolicyPage() {
             <li><strong>Secure Technical Infrastructure:</strong> ISO 27001 certified cloud hosting providers and CRM encryption services hosted within the UK/EEA.</li>
             <li><strong>Statutory Authorities:</strong> Where legally mandated by law enforcement, HMRC, the Financial Conduct Authority (FCA), or court order.</li>
           </ul>
-          <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl text-xs text-amber-900 flex items-start gap-2.5">
-            <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+          <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-xs text-emerald-900 flex items-start gap-2.5">
+            <AlertTriangle className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
             <p>
               <strong>Strict No-Spam Policy:</strong> We do not sell, rent, or lease personal customer data to non-affiliated telemarketing companies, lead aggregators, or unsolicited cold-calling operations.
             </p>

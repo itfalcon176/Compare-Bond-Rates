@@ -454,13 +454,13 @@ a {
   display: flex;
   align-items: center;
   gap: 3px;
-  color: #fbbf24;
+  color: #34d399;
 }
 
 .hero-rating-text {
   font-size: 0.84rem;
   font-weight: 700;
-  color: #fbbf24;
+  color: #34d399;
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -1003,9 +1003,9 @@ a {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  color: #fbbf24;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1061,9 +1061,9 @@ a {
 }
 
 .step-badge-amber {
-  color: #fbbf24;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .steps-cta-center {
@@ -1148,9 +1148,9 @@ a {
   text-transform: uppercase;
   margin-left: 8px;
   vertical-align: middle;
-  background: rgba(245, 158, 11, 0.2);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
 }
 
 .badge-risk-low {
@@ -1253,9 +1253,9 @@ a {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  color: #fbbf24;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1265,8 +1265,8 @@ a {
 
 .why-card:hover .why-card-icon-badge {
   transform: scale(1.06);
-  background: rgba(245, 158, 11, 0.2);
-  border-color: rgba(245, 158, 11, 0.6);
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.6);
 }
 
 .why-card-title {
@@ -1295,9 +1295,9 @@ a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  color: #fbbf24;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   padding: 3px 10px;
   border-radius: 9999px;
 }

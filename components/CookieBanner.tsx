@@ -72,14 +72,14 @@ export default function CookieBanner({ onOpenLegal }: CookieBannerProps) {
                   <button
                     type="button"
                     onClick={() => onOpenLegal('cookie')}
-                    className="text-amber-700 hover:text-amber-800 font-semibold underline underline-offset-2 transition-colors cursor-pointer inline"
+                    className="text-emerald-700 hover:text-emerald-800 font-semibold underline underline-offset-2 transition-colors cursor-pointer inline"
                   >
                     Read our Cookie Policy
                   </button>
                 ) : (
                   <Link
                     href="/cookie-policy"
-                    className="text-amber-700 hover:text-amber-800 font-semibold underline underline-offset-2 transition-colors inline"
+                    className="text-emerald-700 hover:text-emerald-800 font-semibold underline underline-offset-2 transition-colors inline"
                   >
                     Read our Cookie Policy
                   </Link>

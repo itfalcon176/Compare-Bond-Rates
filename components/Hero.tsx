@@ -297,15 +297,15 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
 
             {/* 4.9/5 Independent Score Rating Badge */}
             <div className="pt-2">
-              <div className="inline-flex items-center gap-2.5 bg-slate-900/65 backdrop-blur-md border border-amber-500/45 px-4 py-1.5 rounded-full shadow-md">
-                <div className="flex items-center gap-1 text-amber-400">
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+              <div className="inline-flex items-center gap-2.5 bg-slate-900/65 backdrop-blur-md border border-emerald-500/45 px-4 py-1.5 rounded-full shadow-md">
+                <div className="flex items-center gap-1 text-emerald-400">
+                  <Star className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
+                  <Star className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
+                  <Star className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
+                  <Star className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
+                  <Star className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
                 </div>
-                <span className="text-xs font-bold text-amber-300 tracking-wide">
+                <span className="text-xs font-bold text-emerald-300 tracking-wide">
                   4.9/5 Independent Score
                 </span>
               </div>

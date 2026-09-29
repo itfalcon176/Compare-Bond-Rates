@@ -70,7 +70,7 @@ export default function ComplaintsPolicyPage() {
             </div>
 
             <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
                 <Landmark className="w-4 h-4" />
               </div>
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">By Post</h4>
