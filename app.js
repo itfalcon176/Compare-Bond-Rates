@@ -456,7 +456,7 @@ const legalDocuments = {
     <h3>Our Commitment to Service</h3>
     <p>We strive to provide outstanding customer support. If you have any concern or complaint regarding our intermediary service:</p>
     <p><strong>Email:</strong> complaints@comparebondrates.co.uk<br>
-       <strong>Telephone:</strong> 0203 890 4567<br>
+       <strong>Telephone:</strong> 070 2165 1946<br>
        <strong>Post:</strong> Complaints Department, Compare Bond Rates Limited, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ.</p>
     <h3>Resolution Timelines</h3>
     <p>We acknowledge all written complaints within 1 business day and issue a formal resolution within 4 weeks. If unresolved, eligible complainants may refer the matter to the Financial Ombudsman Service (Exchange Tower, London E14 9SR).</p>

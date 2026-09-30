@@ -95,7 +95,7 @@ export default function LegalModal({ isOpen, onClose, legalType }: LegalModalPro
           </p>
           <div className="bg-slate-50 p-4 rounded-xl space-y-1">
             <p><strong>Email:</strong> complaints@comparebondrates.co.uk</p>
-            <p><strong>Telephone:</strong> 0203 890 4567</p>
+            <p><strong>Telephone:</strong> 070 2165 1946</p>
             <p><strong>Post:</strong> Complaints Department, Compare Bond Rates Limited, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ.</p>
           </div>
           <h4 className="text-base font-bold text-slate-900">Resolution Timelines</h4>

@@ -411,7 +411,7 @@ export default function LeadModal({ isOpen, onClose, leadData }: LeadModalProps)
                   <span>Dedicated Specialist Assigned</span>
                 </div>
                 <p className="text-blue-800 text-[11px] leading-relaxed">
-                  A senior UK bond specialist will contact you on <strong className="text-blue-950">{getFormattedPhone()}</strong> shortly from <strong className="text-blue-950">0203 890 4567</strong> to confirm your rate reservation.
+                  A senior UK bond specialist will contact you on <strong className="text-blue-950">{getFormattedPhone()}</strong> shortly from <strong className="text-blue-950">070 2165 1946</strong> to confirm your rate reservation.
                 </p>
               </div>
 

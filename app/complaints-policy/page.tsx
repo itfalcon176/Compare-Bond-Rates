@@ -64,7 +64,7 @@ export default function ComplaintsPolicyPage() {
               </div>
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">By Telephone</h4>
               <p className="text-xs text-slate-600 font-semibold">
-                0203 890 4567
+                070 2165 1946
               </p>
               <p className="text-[11px] text-slate-500">Mon-Fri: 8:00am - 6:00pm</p>
             </div>
