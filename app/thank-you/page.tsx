@@ -24,35 +24,27 @@ export default function ThankYouPage() {
   const nextSteps = [
     {
       step: '01',
-      title: 'Institutional Rate Matching',
-      timing: 'In Progress',
-      timingColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      title: 'Rate Analysis (Within 24 Hours)',
       description:
-        'Our comparison engine is matching your chosen criteria against today’s highest-yielding fixed-rate bonds from FCA-regulated UK institutions.',
+        'Our team will review the latest fixed-rate bond offers from leading FCA-regulated banks and building societies across the UK.',
     },
     {
       step: '02',
-      title: 'Senior Specialist Review',
-      timing: 'Within 15 Minutes',
-      timingColor: 'bg-blue-50 text-blue-700 border-blue-200',
+      title: 'Personalised Consultation',
       description:
-        'A dedicated fixed-income specialist reviews your requirements, validates current allocation availability, and prepares your bespoke rate report.',
+        'One of our team members will get in touch with you to go through your tailored bond comparison and address any questions you may have.',
     },
     {
       step: '03',
-      title: 'Bespoke Rate Report Dispatch',
-      timing: 'Sent to Inbox',
-      timingColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      title: 'Detailed Bond Comparison',
       description:
-        'Your comprehensive rate breakdown will be dispatched directly to your registered email from enquiries@comparebondrates.co.uk with full return projections.',
+        'We’ll provide you with a clear, in-depth comparison of the most competitive fixed-rate bond options currently available from a range of UK institutions.',
     },
     {
       step: '04',
-      title: 'Information Pack & Prospectus',
-      timing: 'Direct to Email',
-      timingColor: 'bg-slate-100 text-slate-700 border-slate-200',
+      title: 'Simple Application Process',
       description:
-        'Complete issuer documentation, FSCS protection details, and subscription guidelines will be available for you to review at your own pace.',
+        'After selecting the bond that suits you, our team will support you throughout the application process, making each step clear and easy to complete.',
     },
   ];
 
@@ -105,8 +97,7 @@ export default function ThankYouPage() {
                 transition={{ delay: 0.2 }}
                 className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed"
               >
-                We have received your details. Our team is now generating your tailored comparison report comparing top UK fixed-rate bonds yielding up to <strong className="text-emerald-400 font-bold">8.20% P.A.</strong>
-              </motion.p>
+                We’ve received your request to compare bonds, and our team is currently reviewing the fixed-rate bond options offered by FCA-regulated institutions to find the most suitable rates for you.              </motion.p>
             </div>
 
             {/* Body Container */}
@@ -141,9 +132,6 @@ export default function ThankYouPage() {
                         <span className="text-xs font-black text-blue-700 bg-blue-100/70 px-2.5 py-1 rounded-lg">
                           STEP {item.step}
                         </span>
-                        <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${item.timingColor}`}>
-                          {item.timing}
-                        </span>
                       </div>
 
                       <div className="space-y-1.5 flex-grow">
@@ -159,7 +147,7 @@ export default function ThankYouPage() {
                 </div>
               </div>
 
-              {/* 4. What You Receive with Compare Bond Rates */}
+              {/* 4. Important Information */}
               <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-400/30">
@@ -167,11 +155,8 @@ export default function ThankYouPage() {
                   </div>
                   <div>
                     <h3 className="text-base sm:text-lg font-bold">
-                      Our Fixed Rate Guarantee &amp; Investor Protections
+                      Important Information
                     </h3>
-                    <p className="text-xs text-slate-400">
-                      Why thousands of UK savers trust Compare Bond Rates
-                    </p>
                   </div>
                 </div>
 
@@ -180,9 +165,8 @@ export default function ThankYouPage() {
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5" />
                     </div>
-                    <div>
-                      <strong className="block text-slate-200 font-bold">FSCS Eligible Allocations</strong>
-                      <span className="text-slate-400 text-xs">Eligible deposits protected up to £120,000 per person per authorised firm.</span>
+                    <div className="text-slate-300">
+                      We compare rates from FCA-regulated banks and building societies operating in the UK.
                     </div>
                   </div>
 
@@ -190,9 +174,8 @@ export default function ThankYouPage() {
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5" />
                     </div>
-                    <div>
-                      <strong className="block text-slate-200 font-bold">100% Free &amp; Independent</strong>
-                      <span className="text-slate-400 text-xs">Zero broker fees or commissions deducted from your initial capital.</span>
+                    <div className="text-slate-300">
+                      Eligible deposits are protected by the FSCS up to £120,000 per person, subject to applicable eligibility criteria.
                     </div>
                   </div>
 
@@ -200,9 +183,8 @@ export default function ThankYouPage() {
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5" />
                     </div>
-                    <div>
-                      <strong className="block text-slate-200 font-bold">Fixed Payout Certainty</strong>
-                      <span className="text-slate-400 text-xs">Contractual fixed returns (monthly income or compounded at term maturity).</span>
+                    <div className="text-slate-300">
+                      Our bond comparison service is completely free of charge.
                     </div>
                   </div>
 
@@ -210,9 +192,8 @@ export default function ThankYouPage() {
                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5" />
                     </div>
-                    <div>
-                      <strong className="block text-slate-200 font-bold">Strict Privacy &amp; Data Security</strong>
-                      <span className="text-slate-400 text-xs">256-bit bank-grade encryption in full compliance with UK GDPR laws.</span>
+                    <div className="text-slate-300">
+                      Rates Pro acts as a comparison aggregator and does not provide financial advice.
                     </div>
                   </div>
                 </div>
