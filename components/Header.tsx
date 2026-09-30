@@ -111,11 +111,11 @@ export default function Header({ onCompareClick }: HeaderProps) {
             ))}
             <div className="pt-2 flex flex-col gap-3">
               <a
-                href="tel:02038904567"
+                href="tel:07021651946"
                 className="flex items-center gap-2 text-sm font-bold text-slate-700 py-1"
               >
                 <Phone className="w-4 h-4 text-emerald-600" />
-                <span>Call: 0203 890 4567</span>
+                <span>Call: 070 2165 1946</span>
               </a>
               <button
                 onClick={() => {

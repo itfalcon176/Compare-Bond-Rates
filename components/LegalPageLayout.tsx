@@ -227,11 +227,11 @@ export default function LegalPageLayout({
               </div>
               <div className="space-y-2 pt-1 text-xs">
                 <a 
-                  href="tel:02038904567" 
+                  href="tel:07021651946" 
                   className="flex items-center gap-2.5 text-slate-200 hover:text-emerald-400 font-semibold transition-colors"
                 >
                   <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                  <span>0203 890 4567</span>
+                  <span>070 2165 1946</span>
                 </a>
                 <a 
                   href="mailto:enquiries@comparebondrates.co.uk" 

@@ -78,7 +78,7 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
               Support
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li><a href="tel:02038904567" className="hover:text-emerald-400 transition-colors">Contact Us</a></li>
+              <li><a href="tel:07021651946" className="hover:text-emerald-400 transition-colors">Contact Us</a></li>
               <li><a href="#why-us" className="hover:text-emerald-400 transition-colors">Why Choose Us</a></li>
               <li><a href="#testimonials" className="hover:text-emerald-400 transition-colors">Client Reviews</a></li>
               <li><a href="#faq" className="hover:text-emerald-400 transition-colors">Frequently Asked Questions</a></li>
@@ -93,8 +93,8 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
             <div className="space-y-2.5 text-xs text-slate-300">
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <a href="tel:02038904567" className="hover:text-emerald-400 font-semibold">
-                  0203 890 4567
+                <a href="tel:07021651946" className="hover:text-emerald-400 font-semibold">
+                  070 2165 1946
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
