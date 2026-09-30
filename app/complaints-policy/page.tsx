@@ -16,7 +16,7 @@ export default function ComplaintsPolicyPage() {
       activeSlug="complaints-policy"
     >
       <div className="space-y-8">
-        
+
         {/* Intro Alert Box */}
         <div className="bg-purple-50/70 border border-purple-200/80 rounded-2xl p-5 text-purple-950 flex items-start gap-3.5">
           <MessageSquareWarning className="w-5 h-5 text-purple-700 flex-shrink-0 mt-0.5" />
@@ -45,7 +45,7 @@ export default function ComplaintsPolicyPage() {
           <p className="text-sm text-slate-600 leading-relaxed">
             You may register a complaint free of charge using any of the following communication channels:
           </p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
             <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
               <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center">
@@ -132,25 +132,7 @@ export default function ComplaintsPolicyPage() {
           </div>
         </section>
 
-        {/* Section 4 */}
-        <section className="space-y-3">
-          <h2 className="text-xl sm:text-2xl font-bold font-display text-slate-900 flex items-center gap-2.5 border-b border-slate-100 pb-3">
-            <span className="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center">4</span>
-            Financial Ombudsman Service (FOS) Referral
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            If you remain dissatisfied with our final response, or if eight weeks have passed since your initial complaint without a resolution, eligible complainants have the legal right to refer the matter to the <strong>Financial Ombudsman Service (FOS)</strong>.
-          </p>
-          <div className="bg-slate-900 text-slate-200 p-5 rounded-2xl space-y-2 text-xs sm:text-sm">
-            <p className="font-bold text-white text-base">Financial Ombudsman Service Contact Details:</p>
-            <p><strong>Address:</strong> Financial Ombudsman Service, Exchange Tower, London, E14 9SR</p>
-            <p><strong>Telephone:</strong> 0800 023 4567 or 0300 123 9123</p>
-            <p><strong>Website:</strong> <a href="https://www.financial-ombudsman.org.uk" target="_blank" rel="noopener noreferrer" className="text-emerald-400 underline">www.financial-ombudsman.org.uk</a></p>
-            <p className="text-[11px] text-slate-400 pt-1">
-              Referrals to the Ombudsman must be made within six months of receiving our Final Response Letter.
-            </p>
-          </div>
-        </section>
+
 
       </div>
     </LegalPageLayout>
