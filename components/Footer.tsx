@@ -153,16 +153,6 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
           </p>
         </div>
 
-        {/* Company Registration Details & Intermediary Disclaimer */}
-        <div className="text-xs text-slate-400 space-y-2 mb-6">
-          <p>
-            Compare Bond Rates Limited. Registered Office: 25 Moorgate, London EC2R 6AY. Company Registration Number: 12847593.
-          </p>
-          <p className="text-[11px] text-slate-500 leading-relaxed">
-            Compare Bond Rates is a trading name of Compare Bond Rates Limited. We act as an intermediary and are not the manufacturer of the investment products we recommend. We may receive commission from product providers, but this does not affect the rates offered to clients.
-          </p>
-        </div>
-
         {/* Legal Links & Copyright */}
         <div className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">

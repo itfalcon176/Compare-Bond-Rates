@@ -84,8 +84,8 @@ export default function Faq({ onCtaClick }: FaqProps) {
               <div
                 key={idx}
                 className={`border rounded-2xl transition-all duration-200 overflow-hidden ${isOpen
-                    ? 'border-emerald-400 bg-white shadow-md'
-                    : 'border-slate-200 bg-white hover:border-slate-300'
+                  ? 'border-emerald-400 bg-white shadow-md'
+                  : 'border-slate-200 bg-white hover:border-slate-300'
                   }`}
               >
                 <button
@@ -124,35 +124,7 @@ export default function Faq({ onCtaClick }: FaqProps) {
           })}
         </div>
 
-        {/* Bottom CTA Card */}
-        <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-lg text-center space-y-4">
-          <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Dedicated UK Fixed-Income Specialists</span>
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900">
-            Have questions regarding your specific allocation?
-          </h3>
-          <p className="text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Our bond introduction specialists can walk you through institutional prospectuses, FSCS limits, and current peak yield availability.
-          </p>
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-            <button
-              type="button"
-              onClick={onCtaClick}
-              className="px-6 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2"
-            >
-              <span>Get Your Impartial Bond Report</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <a
-              href="tel:02038904567"
-              className="px-5 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm rounded-xl border border-slate-200 transition-all"
-            >
-              Call 0203 890 4567
-            </a>
-          </div>
-        </div>
+
 
       </div>
     </section>
