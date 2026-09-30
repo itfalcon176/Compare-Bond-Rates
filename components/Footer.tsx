@@ -171,7 +171,6 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
               Cookie Preferences
             </button>
             <Link href="/complaints-policy" className="hover:text-emerald-400 transition-colors">Complaints Policy</Link>
-            <Link href="/modern-slavery-statement" className="hover:text-emerald-400 transition-colors">Modern Slavery Statement</Link>
           </div>
           <p>© 2026 Compare Bond Rates Limited. All rights reserved.</p>
         </div>

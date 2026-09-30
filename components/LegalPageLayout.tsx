@@ -11,7 +11,6 @@ import {
   Scale,
   Cookie,
   MessageSquareWarning,
-  AlertCircle,
   Phone,
   Mail,
   ArrowLeft,
@@ -27,7 +26,7 @@ interface LegalPageLayoutProps {
   title: string;
   subtitle: string;
   lastUpdated?: string;
-  activeSlug: 'privacy-policy' | 'terms-and-conditions' | 'cookie-policy' | 'complaints-policy' | 'modern-slavery-statement';
+  activeSlug: 'privacy-policy' | 'terms-and-conditions' | 'cookie-policy' | 'complaints-policy';
   children: React.ReactNode;
 }
 
@@ -66,13 +65,6 @@ export default function LegalPageLayout({
       slug: 'complaints-policy',
       icon: MessageSquareWarning,
       desc: 'Our transparent dispute resolution procedure and timelines',
-    },
-    {
-      name: 'Modern Slavery Statement',
-      href: '/modern-slavery-statement',
-      slug: 'modern-slavery-statement',
-      icon: AlertCircle,
-      desc: 'Section 54(1) Modern Slavery Act 2015 statement',
     },
   ];
 
