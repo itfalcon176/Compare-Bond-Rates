@@ -77,7 +77,7 @@ export default function ComplaintsPolicyPage() {
               <p className="text-[11px] text-slate-600 leading-relaxed">
                 Complaints Department<br />
                 Compare Bond Rates Limited<br />
-                25 Moorgate, London, EC2R 6AY
+                71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
               </p>
             </div>
           </div>

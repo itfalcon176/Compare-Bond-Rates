@@ -250,7 +250,7 @@ export default function LegalPageLayout({
                 <span>Company Information</span>
               </div>
               <p className="text-[11px] leading-relaxed text-slate-500">
-                Compare Bond Rates Limited. Registered in England &amp; Wales (No. 12847593). Registered Office: 25 Moorgate, London EC2R 6AY.
+                Compare Bond Rates Limited. Registered in England &amp; Wales (No. 12847593). Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ.
               </p>
             </div>
 

@@ -21,7 +21,7 @@ export default function LegalModal({ isOpen, onClose, legalType }: LegalModalPro
           <p><strong>Last Updated: January 2026</strong></p>
           <h4 className="text-base font-bold text-slate-900">1. Who We Are</h4>
           <p>
-            CompareBondRates.co.uk is owned and operated by Compare Bond Rates Limited (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). Registered Office: 25 Moorgate, London EC2R 6AY. Company Registration Number: 12847593. We act as an independent data controller under the UK Data Protection Act 2018 and UK GDPR.
+            CompareBondRates.co.uk is owned and operated by Compare Bond Rates Limited (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ. Company Registration Number: 12847593. We act as an independent data controller under the UK Data Protection Act 2018 and UK GDPR.
           </p>
           <h4 className="text-base font-bold text-slate-900">2. Information We Collect</h4>
           <p>
@@ -96,7 +96,7 @@ export default function LegalModal({ isOpen, onClose, legalType }: LegalModalPro
           <div className="bg-slate-50 p-4 rounded-xl space-y-1">
             <p><strong>Email:</strong> complaints@comparebondrates.co.uk</p>
             <p><strong>Telephone:</strong> 0203 890 4567</p>
-            <p><strong>Post:</strong> Complaints Department, Compare Bond Rates Limited, 25 Moorgate, London EC2R 6AY.</p>
+            <p><strong>Post:</strong> Complaints Department, Compare Bond Rates Limited, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ.</p>
           </div>
           <h4 className="text-base font-bold text-slate-900">Resolution Timelines</h4>
           <p>

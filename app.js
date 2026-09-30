@@ -408,7 +408,7 @@ const legalDocuments = {
     <h2>Privacy Policy</h2>
     <p><strong>Last Updated: January 2026</strong></p>
     <h3>1. Who We Are</h3>
-    <p>CompareBondRates.co.uk is owned and operated by Compare Bond Rates Limited ("we", "our", or "us"). Registered Office: 25 Moorgate, London EC2R 6AY. Company Registration Number: 12847593. We act as an independent data controller under the UK Data Protection Act 2018 and UK GDPR.</p>
+    <p>CompareBondRates.co.uk is owned and operated by Compare Bond Rates Limited ("we", "our", or "us"). Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ. Company Registration Number: 12847593. We act as an independent data controller under the UK Data Protection Act 2018 and UK GDPR.</p>
     
     <h3>2. Information We Collect</h3>
     <p>We may collect personal information including: full name, contact telephone number, email address, UK postcode, target investment amount, preferred investment horizon, and communication history.</p>
@@ -457,7 +457,7 @@ const legalDocuments = {
     <p>We strive to provide outstanding customer support. If you have any concern or complaint regarding our intermediary service:</p>
     <p><strong>Email:</strong> complaints@comparebondrates.co.uk<br>
        <strong>Telephone:</strong> 0203 890 4567<br>
-       <strong>Post:</strong> Complaints Department, Compare Bond Rates Limited, 25 Moorgate, London EC2R 6AY.</p>
+       <strong>Post:</strong> Complaints Department, Compare Bond Rates Limited, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ.</p>
     <h3>Resolution Timelines</h3>
     <p>We acknowledge all written complaints within 1 business day and issue a formal resolution within 4 weeks. If unresolved, eligible complainants may refer the matter to the Financial Ombudsman Service (Exchange Tower, London E14 9SR).</p>
   `,

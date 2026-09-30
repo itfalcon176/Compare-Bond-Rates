@@ -103,7 +103,7 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span>25 Moorgate, London, EC2R 6AY</span>
+                <span>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</span>
               </div>
               <div className="flex items-center gap-2.5 text-slate-400">
                 <Clock className="w-4 h-4 text-emerald-400 flex-shrink-0" />

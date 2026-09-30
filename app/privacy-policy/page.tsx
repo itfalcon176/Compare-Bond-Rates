@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs sm:text-sm text-slate-700 space-y-1.5">
             <p><strong>Company Registration Number:</strong> 12847593</p>
-            <p><strong>Registered Office:</strong> 25 Moorgate, London, EC2R 6AY, United Kingdom</p>
+            <p><strong>Registered Office:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</p>
             <p><strong>Data Controller Status:</strong> Registered Data Controller under UK Information Commissioner&apos;s Office (ICO) guidelines.</p>
           </div>
         </section>
