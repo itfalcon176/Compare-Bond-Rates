@@ -5,133 +5,184 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { 
-  CheckCircle2, 
-  Sparkles, 
-  ShieldCheck, 
-  Check, 
-  Clock, 
-  ArrowLeft,
+import {
+  CheckCircle2,
+  ShieldCheck,
+  Phone,
   Mail,
-  PhoneCall,
-  Award,
-  Building2,
-  Lock
+  Clock,
+  ArrowLeft,
+  FileText,
+  Lock,
+  Landmark,
+  BadgePercent,
+  CalendarCheck,
+  Headphones,
+  Check
 } from 'lucide-react';
 
 export default function ThankYouPage() {
-  return (
-    <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-emerald-600 selection:text-white">
-      {/* Header */}
-      <Header />
+  const currentDate = new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 
-      {/* Main Thank You Page Content */}
-      <main className="flex-grow py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl shadow-slate-900/5 overflow-hidden">
-            
-            {/* Top Green Hero Banner */}
-            <div className="bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-700 px-6 sm:px-10 py-10 text-center text-white relative">
+  const nextSteps = [
+    {
+      step: '01',
+      title: 'Institutional Rate Matching',
+      timing: 'In Progress',
+      timingColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      description:
+        'Our comparison engine is matching your chosen criteria against today’s highest-yielding fixed-rate bonds from FCA-regulated UK institutions.',
+    },
+    {
+      step: '02',
+      title: 'Senior Specialist Review',
+      timing: 'Within 15 Minutes',
+      timingColor: 'bg-blue-50 text-blue-700 border-blue-200',
+      description:
+        'A dedicated fixed-income specialist is assigned to review your criteria, verify current allocation availability, and prepare your bespoke rate report.',
+    },
+    {
+      step: '03',
+      title: 'Telephone Consultation & Rate Reservation',
+      timing: 'Priority Dispatch',
+      timingColor: 'bg-amber-50 text-amber-800 border-amber-200',
+      description:
+        'You will receive a brief, no-obligation call from 0203 890 4567 to confirm your identity, walk through return schedules, and secure your rate reservation before allocations close.',
+    },
+    {
+      step: '04',
+      title: 'Information Pack & Prospectus Delivery',
+      timing: 'Direct to Email',
+      timingColor: 'bg-slate-100 text-slate-700 border-slate-200',
+      description:
+        'Complete issuer documentation, FSCS protection details, and subscription forms will be dispatched directly to your inbox for review at your own pace.',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-blue-600 selection:text-white">
+      {/* Header */}
+      <Header onCompareClick={() => { window.location.href = '/#hero-form'; }} />
+
+      {/* Main Content Area */}
+      <main className="flex-grow py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto space-y-8">
+
+          {/* 1. Main Success Hero Card */}
+          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden">
+
+            {/* Top Navy/Emerald Gradient Header */}
+            <div className="bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 px-6 sm:px-12 py-10 sm:py-14 text-center text-white relative">
+
+              {/* Subtle background glow */}
+              <div className="absolute top-0 right-1/4 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Animated Check Icon */}
               <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', stiffness: 220, damping: 15 }}
-                className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-4 border border-white/30 shadow-lg"
+                initial={{ scale: 0, rotate: -20 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 240, damping: 18 }}
+                className="w-20 h-20 bg-emerald-500/20 border-2 border-emerald-400/50 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg backdrop-blur-sm"
               >
-                <CheckCircle2 className="w-11 h-11 text-white" />
+                <CheckCircle2 className="w-11 h-11 text-emerald-400 stroke-[2.2]" />
               </motion.div>
+
+              {/* Status Pill */}
+              <div className="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Request Confirmed • {currentDate}</span>
+              </div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.15 }}
-                className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display text-white mb-2"
+                transition={{ delay: 0.1 }}
+                className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display tracking-tight text-white mb-3"
               >
-                Thank You for Your Submission!
+                Thank You! Your Comparison Request Is Confirmed
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 }}
-                className="text-sm sm:text-base text-emerald-50 max-w-lg mx-auto opacity-95"
+                transition={{ delay: 0.2 }}
+                className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed"
               >
-                Your bond comparison request has been received successfully
+                We have received your details. Our team is now generating your tailored comparison report comparing top UK fixed-rate bonds yielding up to <strong className="text-emerald-400 font-bold">8.20% P.A.</strong>
               </motion.p>
             </div>
 
-            {/* Content Body */}
-            <div className="p-6 sm:p-10 space-y-8">
-              
-              {/* Intro message */}
-              <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-5 sm:p-6 text-slate-700">
-                <p className="text-sm sm:text-base leading-relaxed">
-                  We&apos;ve received your bond comparison request and our team is already working on finding you the best fixed rate bond rates available from FCA-regulated institutions.
-                </p>
+            {/* Body Container */}
+            <div className="p-6 sm:p-10 space-y-10">
+
+              {/* 2. Urgent Call Notice Banner */}
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/90 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Phone className="w-6 h-6 animate-pulse" />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-base font-bold text-slate-900">
+                      Look Out for a Call from <span className="text-blue-700">0203 890 4567</span>
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
+                      To protect your privacy and ensure allocations are reserved in your name, a senior bond specialist will call you shortly to review your personalized rates.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-full sm:w-auto">
+                  <a
+                    href="tel:02038904567"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-xl shadow transition-all"
+                  >
+                    <Headphones className="w-4 h-4" />
+                    <span>Call Now Direct</span>
+                  </a>
+                </div>
               </div>
 
-              {/* What Happens Next Section */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
-                    <Sparkles className="w-4 h-4 text-emerald-700" />
+              {/* 3. Step-by-Step Next Actions */}
+              <div className="space-y-5">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm">
+                      <CalendarCheck className="w-4 h-4" />
+                    </div>
+                    <h2 className="text-lg sm:text-xl font-bold font-display text-slate-900">
+                      What Happens Next?
+                    </h2>
                   </div>
-                  <h2 className="text-lg sm:text-xl font-bold font-display text-slate-900">
-                    What Happens Next?
-                  </h2>
+                  <span className="text-xs text-slate-500 font-medium">Standard Response Timeline</span>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 pt-1">
-                  {[
-                    {
-                      step: '1',
-                      title: 'Rate Analysis',
-                      time: 'Within 24 Hours',
-                      desc: 'Our team will analyse current fixed rate bond rates from leading FCA-regulated UK banks and building societies.',
-                    },
-                    {
-                      step: '2',
-                      title: 'Personalised Consultation',
-                      time: 'Dedicated Adviser',
-                      desc: 'A member of our team will contact you to discuss your personalised bond rate comparison and answer any questions.',
-                    },
-                    {
-                      step: '3',
-                      title: 'Detailed Bond Comparison',
-                      time: 'Tailored Report',
-                      desc: 'You\u2019ll receive a comprehensive comparison showing the best available fixed rate bond rates from multiple UK institutions.',
-                    },
-                    {
-                      step: '4',
-                      title: 'Simple Application Process',
-                      time: 'Zero Hassle',
-                      desc: 'Once you\u2019ve chosen your preferred bond, we\u2019ll guide you through the straightforward application process.',
-                    },
-                  ].map((item, idx) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {nextSteps.map((item, idx) => (
                     <motion.div
                       key={item.step}
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 * idx }}
-                      className="p-4 sm:p-5 rounded-2xl bg-slate-50 hover:bg-emerald-50/40 border border-slate-200/80 hover:border-emerald-200 transition-all flex gap-4 items-start"
+                      className="bg-slate-50/90 border border-slate-200/90 rounded-2xl p-5 hover:bg-white hover:shadow-md hover:border-blue-300 transition-all duration-200 flex flex-col justify-between space-y-3"
                     >
-                      <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-sm font-extrabold flex-shrink-0 shadow-sm mt-0.5">
-                        {item.step}
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-black text-blue-700 bg-blue-100/70 px-2.5 py-1 rounded-lg">
+                          STEP {item.step}
+                        </span>
+                        <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${item.timingColor}`}>
+                          {item.timing}
+                        </span>
                       </div>
-                      <div className="flex-1 space-y-1">
-                        <div className="flex items-center justify-between gap-2 flex-wrap">
-                          <h3 className="text-sm sm:text-base font-bold text-slate-900">
-                            {item.title}
-                          </h3>
-                          {item.time && (
-                            <span className="text-[11px] font-bold text-emerald-700 bg-emerald-100/70 px-2.5 py-0.5 rounded-full border border-emerald-200/80">
-                              {item.time}
-                            </span>
-                          )}
-                        </div>
+
+                      <div className="space-y-1.5 flex-grow">
+                        <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                          {item.title}
+                        </h3>
                         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                          {item.desc}
+                          {item.description}
                         </p>
                       </div>
                     </motion.div>
@@ -139,53 +190,88 @@ export default function ThankYouPage() {
                 </div>
               </div>
 
-              {/* Important Information Box */}
-              <div className="bg-slate-900 text-white rounded-2xl p-6 space-y-3.5 shadow-md">
-                <div className="flex items-center gap-2 text-emerald-400">
-                  <ShieldCheck className="w-5 h-5" />
-                  <h3 className="text-sm font-bold uppercase tracking-wider">
-                    Important Information
-                  </h3>
+              {/* 4. What You Receive with Compare Bond Rates */}
+              <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-400/30">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-base sm:text-lg font-bold">
+                      Our Fixed Rate Guarantee &amp; Investor Protections
+                    </h3>
+                    <p className="text-xs text-slate-400">
+                      Why thousands of UK savers trust Compare Bond Rates
+                    </p>
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-300">
-                  <div className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>All institutions we compare are FCA-regulated UK banks and building societies.</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-800 text-xs sm:text-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5" />
+                    </div>
+                    <div>
+                      <strong className="block text-slate-200 font-bold">FSCS Eligible Allocations</strong>
+                      <span className="text-slate-400 text-xs">Eligible deposits protected up to £120,000 per person per authorised firm.</span>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Your deposits are protected up to £120,000 per eligible person under the FSCS.</span>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5" />
+                    </div>
+                    <div>
+                      <strong className="block text-slate-200 font-bold">100% Free &amp; Independent</strong>
+                      <span className="text-slate-400 text-xs">Zero broker fees or commissions deducted from your initial capital.</span>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Our comparison service is completely free with no hidden charges.</span>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5" />
+                    </div>
+                    <div>
+                      <strong className="block text-slate-200 font-bold">Fixed Payout Certainty</strong>
+                      <span className="text-slate-400 text-xs">Contractual fixed returns (monthly income or compounded at term maturity).</span>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Compare Bond Rates is a comparison aggregator and does not provide financial advice.</span>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5" />
+                    </div>
+                    <div>
+                      <strong className="block text-slate-200 font-bold">Strict Privacy &amp; Data Security</strong>
+                      <span className="text-slate-400 text-xs">256-bit bank-grade encryption in full compliance with UK GDPR laws.</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Contact & Return Navigation */}
-              <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-center sm:text-left text-xs text-slate-500">
-                  <span>Questions regarding your request? </span>
-                  <a 
-                    href="mailto:info@comparebondrates.co.uk" 
-                    className="text-emerald-700 font-bold hover:underline"
-                  >
-                    info@comparebondrates.co.uk
-                  </a>
+              {/* 5. Contact Channels & Navigation Footer */}
+              <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-5">
+                <div className="text-center sm:text-left space-y-1">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Need Immediate Assistance?</h4>
+                  <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-semibold text-slate-700">
+                    <a href="tel:02038904567" className="inline-flex items-center gap-1.5 text-blue-700 hover:underline">
+                      <Phone className="w-3.5 h-3.5" />
+                      <span>0203 890 4567</span>
+                    </a>
+                    <span className="text-slate-300">•</span>
+                    <a href="mailto:enquiries@comparebondrates.co.uk" className="inline-flex items-center gap-1.5 text-blue-700 hover:underline">
+                      <Mail className="w-3.5 h-3.5" />
+                      <span>enquiries@comparebondrates.co.uk</span>
+                    </a>
+                  </div>
                 </div>
 
                 <Link
                   href="/"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl shadow transition-all hover:shadow-lg"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  <span>Return to Home</span>
+                  <span>Return to Homepage</span>
                 </Link>
               </div>
 
@@ -193,11 +279,21 @@ export default function ThankYouPage() {
 
           </div>
 
+          {/* Compliance Disclaimer Footer */}
+          <div className="text-center text-[11px] sm:text-xs text-slate-500 space-y-2 max-w-3xl mx-auto px-4 leading-relaxed">
+            <p>
+              Compare Bond Rates is a free, independent comparison platform matching UK savers and investors with institutional and corporate fixed-rate bond products. We do not offer direct investment advice or hold client funds directly.
+            </p>
+            <p>
+              © {new Date().getFullYear()} Compare Bond Rates UK. All rights reserved. Registered in England and Wales.
+            </p>
+          </div>
+
         </div>
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onScrollToForm={() => { window.location.href = '/#hero-form'; }} />
     </div>
   );
 }

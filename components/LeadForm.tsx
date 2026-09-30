@@ -73,11 +73,11 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
 
   // Step 2 Options (including 4 Years!)
   const termOptions = [
-    { label: '1 Year', rate: '7.45% P.A.' },
-    { label: '2 Years', rate: '8.20% P.A.', popular: true },
-    { label: '3 Years', rate: '7.85% P.A.' },
-    { label: '4 Years', rate: '7.75% P.A.' },
-    { label: '5 Years', rate: '7.60% P.A.' },
+    { label: '1 Year' },
+    { label: '2 Years', popular: true },
+    { label: '3 Years' },
+    { label: '4 Years' },
+    { label: '5 Years' },
   ];
 
   // Step 3 Options
@@ -283,9 +283,6 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                         )}
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-100">
-                          {opt.rate}
-                        </span>
                         <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${isSelected ? 'bg-emerald-600 text-white' : 'border border-slate-300 group-hover:border-emerald-500'
                           }`}>
                           {isSelected ? <Check className="w-3.5 h-3.5" /> : <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-emerald-500" />}

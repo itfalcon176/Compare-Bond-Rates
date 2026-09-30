@@ -85,7 +85,6 @@
 
       <nav class="main-nav">
         <a href="#compare-table" class="nav-item">Compare Rates</a>
-        <a href="#calculator" class="nav-item">Returns Calculator</a>
         <a href="#why-us" class="nav-item">Why Fixed Bonds</a>
         <a href="#testimonials" class="nav-item">Client Reviews</a>
         <a href="#faq" class="nav-item">FAQs</a>
@@ -554,142 +553,7 @@
     </div>
   </section>
 
-  <!-- Interactive Bond Returns Calculator Section -->
-  <section class="section calculator-section" id="calculator">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag calculator-tag">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="4" y="2" width="16" height="20" rx="2" />
-            <line x1="8" y1="6" x2="16" y2="6" />
-            <line x1="16" y1="14" x2="16" y2="18" />
-            <path d="M16 10h.01" />
-            <path d="M12 10h.01" />
-            <path d="M8 10h.01" />
-            <path d="M12 14h.01" />
-            <path d="M8 14h.01" />
-            <path d="M12 18h.01" />
-            <path d="M8 18h.01" />
-          </svg>
-          HIGH-PRECISION YIELD SIMULATOR
-        </div>
-        <h2 class="section-title">Fixed-Yield &amp; Cashflow Simulator</h2>
-        <p class="section-desc">Simulate your fixed-income returns across 1 to 5-year fixed terms. Compare
-          monthly income payouts against compounded maturity growth in real time.</p>
-      </div>
 
-      <div class="calc-layout-card">
-        <!-- Controls Column -->
-        <div class="calc-controls-pane">
-          <div class="calc-control-group">
-            <div class="control-header-row">
-              <label for="calcAmountInput">Investment Amount</label>
-              <div class="amount-display-pill">£<span id="amountDisplay">50,000</span></div>
-            </div>
-            <input type="range" id="calcAmountRange" min="5000" max="500000" step="5000" value="50000"
-              class="calc-slider" oninput="updateCalculator()" />
-            <div class="range-labels">
-              <span>£5,000</span>
-              <span>£100,000</span>
-              <span>£250,000</span>
-              <span>£500,000+</span>
-            </div>
-          </div>
-
-          <div class="calc-control-group">
-            <label>Select Fixed Term</label>
-            <div class="term-selector-buttons">
-              <button type="button" class="term-btn" data-term="1" onclick="setCalcTerm(1, this)">1 Year</button>
-              <button type="button" class="term-btn active" data-term="2" onclick="setCalcTerm(2, this)">2
-                Years</button>
-              <button type="button" class="term-btn" data-term="3" onclick="setCalcTerm(3, this)">3 Years</button>
-              <button type="button" class="term-btn" data-term="5" onclick="setCalcTerm(5, this)">5 Years</button>
-            </div>
-          </div>
-
-          <div class="calc-control-group">
-            <div class="control-header-row">
-              <label for="calcRateRange">Interest Rate (Fixed P.A.)</label>
-              <div class="rate-display-pill"><span id="rateDisplay">8.20</span>%</div>
-            </div>
-            <input type="range" id="calcRateRange" min="4.0" max="10.0" step="0.05" value="8.20" class="calc-slider"
-              oninput="updateCalculator()" />
-            <div class="quick-rate-presets">
-              <button type="button" class="preset-pill" onclick="setCalcRate(7.45)">7.45% (1-Yr)</button>
-              <button type="button" class="preset-pill active" onclick="setCalcRate(8.20)">8.20% (Top Market)</button>
-              <button type="button" class="preset-pill" onclick="setCalcRate(7.85)">7.85% (3-Yr)</button>
-            </div>
-          </div>
-
-          <div class="calc-control-group">
-            <label>Interest Payout Frequency</label>
-            <div class="frequency-toggle-wrap">
-              <button type="button" class="freq-btn active" data-freq="monthly"
-                onclick="setPayoutFreq('monthly', this)">Monthly Income</button>
-              <button type="button" class="freq-btn" data-freq="maturity"
-                onclick="setPayoutFreq('maturity', this)">Compound at Maturity</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Results Column -->
-        <div class="calc-results-pane">
-          <div class="results-top-banner">
-            <span class="summary-label">Total Projected Profit</span>
-            <div class="hero-profit-num" id="totalProfitResult">£8,546</div>
-            <span class="sub-profit-text" id="profitSubText">Based on £50,000 at 8.20% over 2 Years</span>
-          </div>
-
-          <div class="results-breakdown-grid">
-            <div class="breakdown-card">
-              <span class="breakdown-title">Estimated Monthly Payout</span>
-              <span class="breakdown-value text-emerald" id="monthlyPayoutResult">£341.67</span>
-              <small class="breakdown-hint">Paid directly to your bank account</small>
-            </div>
-
-            <div class="breakdown-card">
-              <span class="breakdown-title">Annual Interest Return</span>
-              <span class="breakdown-value text-navy" id="annualPayoutResult">£4,100.00</span>
-              <small class="breakdown-hint">Fixed return every 12 mos</small>
-            </div>
-
-            <div class="breakdown-card full-width">
-              <span class="breakdown-title">Total Maturity Balance (Initial Capital + Returns)</span>
-              <span class="breakdown-value text-dark" id="maturityTotalResult">£58,546.40</span>
-              <small class="breakdown-hint">100% Capital returned at term completion</small>
-            </div>
-          </div>
-
-          <!-- Comparison vs High Street Banks -->
-          <div class="comparison-bar-box">
-            <div class="comparison-bar-header">
-              <span>CompareBondRates (8.20%)</span>
-              <strong class="text-emerald" id="compareOurReturn">£8,546 Profit</strong>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill our-fill" style="width: 100%;"></div>
-            </div>
-
-            <div class="comparison-bar-header mt-2">
-              <span>Typical High Street Bank (3.80%)</span>
-              <span class="text-muted" id="compareBankReturn">£3,872 Profit</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill bank-fill" style="width: 45%;"></div>
-            </div>
-            <p class="extra-earnings-callout">
-              🔥 You earn an extra <strong id="differenceAmount">£4,674</strong> with our institutional bond
-              partnerships!
-            </p>
-          </div>
-
-          <button type="button" class="btn btn-primary btn-block btn-large mt-4" onclick="applyFromCalculator()">
-            Apply For This Calculated Rate (8.20%) →
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Why Fixed Rate Bonds Beat Other Assets -->
   <!-- Why Choose Compare Bond Rates -->
@@ -797,84 +661,51 @@
         <div class="table-responsive">
           <table class="comparison-matrix-table products-compared-table">
             <thead>
-              <tr>
-                <th>Product</th>
-                <th class="text-center">Typical Return</th>
-                <th class="text-center">Risk</th>
-                <th class="text-center">FSCS Protected</th>
-                <th class="text-center">Fixed Rate</th>
-                <th class="text-center">Access</th>
-                <th class="text-center">Beats Inflation</th>
+              <tr style="background-color: #2563eb; color: #ffffff;">
+                <th style="padding: 16px 20px;">Investment Type</th>
+                <th style="padding: 16px 20px;">Returns</th>
+                <th style="padding: 16px 20px;">Risk Level</th>
+                <th style="padding: 16px 20px;">Liquidity</th>
+                <th style="padding: 16px 20px;">Protection</th>
               </tr>
             </thead>
             <tbody>
-              <!-- Row 1: Fixed Rate Bonds (Featured) -->
-              <tr class="highlight-row">
-                <td>
-                  <strong>Fixed Rate Bonds</strong>
-                  <span class="pill-badge-table">Featured</span>
+              <!-- Row 1: Fixed Rate Bonds -->
+              <tr class="highlight-row" style="background-color: rgba(236, 253, 245, 0.6);">
+                <td style="padding: 16px 20px;">
+                  <strong style="color: #047857;">✓ Fixed Rate Bonds</strong>
                 </td>
-                <td class="text-center"><strong class="text-emerald font-bold">Up to 8.20% p.a.</strong></td>
-                <td class="text-center"><span class="badge-risk-low">Low</span></td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
-                <td class="text-center"><strong>Fixed term</strong></td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
+                <td style="padding: 16px 20px;"><strong>Up to 8.1% P.A.</strong></td>
+                <td style="padding: 16px 20px;">FSCS Protected</td>
+                <td style="padding: 16px 20px;">Fixed Term</td>
+                <td style="padding: 16px 20px;"><strong>£120,000 Insured</strong></td>
               </tr>
 
-              <!-- Row 2: Easy Access Savings -->
+              <!-- Row 2: Stocks & ETFs -->
               <tr>
-                <td>Easy Access Savings</td>
-                <td class="text-center">~3.5% p.a.</td>
-                <td class="text-center"><span class="badge-risk-low">Low</span></td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
-                <td class="text-center">Anytime</td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
+                <td style="padding: 16px 20px;"><strong>Stocks &amp; ETFs</strong></td>
+                <td style="padding: 16px 20px;">Variable Returns</td>
+                <td style="padding: 16px 20px;">High Volatility</td>
+                <td style="padding: 16px 20px;">Immediate</td>
+                <td style="padding: 16px 20px; color: #64748b;">No Protection</td>
               </tr>
 
-              <!-- Row 3: Cash ISA -->
+              <!-- Row 3: Savings Accounts -->
               <tr>
-                <td>Cash ISA</td>
-                <td class="text-center">~4.5% p.a.</td>
-                <td class="text-center"><span class="badge-risk-low">Low</span></td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
-                <td class="text-center"><span class="symbol-dash">—</span></td>
-                <td class="text-center">Anytime</td>
-                <td class="text-center"><span class="symbol-dash">—</span></td>
+                <td style="padding: 16px 20px;"><strong>Savings Accounts</strong></td>
+                <td style="padding: 16px 20px;">2-3% P.A.</td>
+                <td style="padding: 16px 20px;">Very Low</td>
+                <td style="padding: 16px 20px;">Immediate</td>
+                <td style="padding: 16px 20px;"><strong>£120,000 Insured</strong></td>
               </tr>
 
-              <!-- Row 4: Stocks & Shares -->
+              <!-- Row 4: Property Investment -->
               <tr>
-                <td>Stocks &amp; Shares</td>
-                <td class="text-center">Variable</td>
-                <td class="text-center"><span class="badge-risk-high">High</span></td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
-                <td class="text-center">Anytime</td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
-              </tr>
-
-              <!-- Row 5: Premium Bonds -->
-              <tr>
-                <td>Premium Bonds</td>
-                <td class="text-center">~4.0% avg</td>
-                <td class="text-center"><span class="badge-risk-low">Low</span></td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
-                <td class="text-center">Anytime</td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
-              </tr>
-
-              <!-- Row 6: Buy-to-Let Property -->
-              <tr>
-                <td>Buy-to-Let Property</td>
-                <td class="text-center">~5–7% yield</td>
-                <td class="text-center"><span class="badge-risk-high">High</span></td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
-                <td class="text-center"><span class="symbol-cross">✕</span></td>
-                <td class="text-center">Illiquid</td>
-                <td class="text-center"><span class="symbol-check">✓</span></td>
+                <td style="padding: 16px 20px;"><strong>Property Investment</strong></td>
+                <td style="padding: 16px 20px;">Variable Returns</td>
+                <td style="padding: 16px 20px;">Market Dependent</td>
+                <td style="padding: 16px 20px;">Low</td>
+                <td style="padding: 16px 20px; color: #64748b;">No Protection</td>
               </tr>
             </tbody>
           </table>
@@ -1226,7 +1057,6 @@
             <li><a href="#compare-table" onclick="filterBonds('2-year')">2-Year Fixed Bonds (8.20%)</a></li>
             <li><a href="#compare-table" onclick="filterBonds('3-year')">3-Year Fixed Bonds</a></li>
             <li><a href="#compare-table" onclick="filterBonds('5-year')">5-Year Growth Bonds</a></li>
-            <li><a href="#calculator">Bond Returns Calculator</a></li>
           </ul>
         </div>
 

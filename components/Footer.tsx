@@ -79,7 +79,6 @@ export default function Footer({ onOpenLegal, onScrollToForm }: FooterProps) {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li><a href="tel:02038904567" className="hover:text-emerald-400 transition-colors">Contact Us</a></li>
-              <li><a href="#calculator" className="hover:text-emerald-400 transition-colors">Bond Calculator</a></li>
               <li><a href="#why-us" className="hover:text-emerald-400 transition-colors">Why Choose Us</a></li>
               <li><a href="#testimonials" className="hover:text-emerald-400 transition-colors">Client Reviews</a></li>
               <li><a href="#faq" className="hover:text-emerald-400 transition-colors">Frequently Asked Questions</a></li>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, X, Minus, ArrowRight, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
 
 interface InvestmentComparisonProps {
   onCtaClick?: () => void;
@@ -11,95 +11,45 @@ interface InvestmentComparisonProps {
 export default function InvestmentComparison({ onCtaClick }: InvestmentComparisonProps) {
   const comparisonData = [
     {
-      product: "Fixed Rate Bonds",
+      investmentType: 'Fixed Rate Bonds',
       highlight: true,
-      returnVal: "Up to 8.1% p.a.",
-      risk: "Low",
-      fscs: true,
-      fixedRate: true,
-      access: "Fixed term",
-      beatsInflation: true,
+      returns: 'Up to 8.1% P.A.',
+      riskLevel: 'FSCS Protected',
+      liquidity: 'Fixed Term',
+      protection: '£120,000 Insured',
     },
     {
-      product: "Easy Access Savings",
+      investmentType: 'Stocks & ETFs',
       highlight: false,
-      returnVal: "~3.5% p.a.",
-      risk: "Low",
-      fscs: true,
-      fixedRate: false,
-      access: "Anytime",
-      beatsInflation: false,
+      returns: 'Variable Returns',
+      riskLevel: 'High Volatility',
+      liquidity: 'Immediate',
+      protection: 'No Protection',
     },
     {
-      product: "Cash ISA",
+      investmentType: 'Savings Accounts',
       highlight: false,
-      returnVal: "~4.5% p.a.",
-      risk: "Low",
-      fscs: true,
-      fixedRate: null, // neutral dash
-      access: "Anytime",
-      beatsInflation: null, // neutral dash
+      returns: '2-3% P.A.',
+      riskLevel: 'Very Low',
+      liquidity: 'Immediate',
+      protection: '£120,000 Insured',
     },
     {
-      product: "Stocks & Shares",
+      investmentType: 'Property Investment',
       highlight: false,
-      returnVal: "Variable",
-      risk: "High",
-      fscs: false,
-      fixedRate: false,
-      access: "Anytime",
-      beatsInflation: true,
-    },
-    {
-      product: "Premium Bonds",
-      highlight: false,
-      returnVal: "~4.0% avg",
-      risk: "Low",
-      fscs: true,
-      fixedRate: false,
-      access: "Anytime",
-      beatsInflation: false,
-    },
-    {
-      product: "Buy-to-Let Property",
-      highlight: false,
-      returnVal: "~5–7% yield",
-      risk: "High",
-      fscs: false,
-      fixedRate: false,
-      access: "Illiquid",
-      beatsInflation: true,
+      returns: 'Variable Returns',
+      riskLevel: 'Market Dependent',
+      liquidity: 'Low',
+      protection: 'No Protection',
     },
   ];
-
-  const renderStatus = (val: boolean | null) => {
-    if (val === true) {
-      return (
-        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 font-bold">
-          <Check className="w-4 h-4 stroke-[2.5]" />
-        </span>
-      );
-    }
-    if (val === false) {
-      return (
-        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-rose-50 text-rose-500 font-bold">
-          <X className="w-4 h-4 stroke-[2.5]" />
-        </span>
-      );
-    }
-    return (
-      <span className="inline-flex items-center justify-center w-6 h-6 text-slate-400 font-bold">
-        <Minus className="w-4 h-4 stroke-[2.5]" />
-      </span>
-    );
-  };
 
   return (
     <section className="py-20 lg:py-24 bg-white border-t border-slate-200/80" id="investment-comparison">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 border border-blue-200/80 px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase mb-3.5">
             <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
             <span>Market Benchmark Analysis</span>
@@ -114,81 +64,91 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
           </p>
         </div>
 
-        {/* Comparison Table Container */}
-        <div className="bg-white border border-slate-200 rounded-2xl sm:rounded-3xl shadow-md overflow-hidden">
+        {/* Comparison Table Card */}
+        <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-lg shadow-slate-200/50 overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[720px]">
+            <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
-                <tr className="bg-[#0c1a3b] text-white text-xs sm:text-sm font-bold tracking-wide">
-                  <th className="py-4 px-5 font-bold">Product</th>
-                  <th className="py-4 px-4 font-bold text-center">Typical Return</th>
-                  <th className="py-4 px-4 font-bold text-center">Risk</th>
-                  <th className="py-4 px-4 font-bold text-center">FSCS Protected</th>
-                  <th className="py-4 px-4 font-bold text-center">Fixed Rate</th>
-                  <th className="py-4 px-4 font-bold text-center">Access</th>
-                  <th className="py-4 px-4 font-bold text-center">Beats Inflation</th>
+                <tr className="bg-blue-600 text-white text-xs sm:text-sm font-bold tracking-wide">
+                  <th className="py-4 px-6 font-extrabold">Investment Type</th>
+                  <th className="py-4 px-5 font-extrabold">Returns</th>
+                  <th className="py-4 px-5 font-extrabold">Risk Level</th>
+                  <th className="py-4 px-5 font-extrabold">Liquidity</th>
+                  <th className="py-4 px-6 font-extrabold">Protection</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-xs sm:text-sm">
                 {comparisonData.map((row, idx) => (
                   <tr
                     key={idx}
-                    className={`transition-colors duration-150 ${row.highlight
-                      ? 'bg-emerald-50/40 border-l-4 border-l-emerald-500 font-medium'
-                      : 'hover:bg-slate-50/80'
-                      }`}
+                    className={`transition-colors duration-150 ${
+                      row.highlight
+                        ? 'bg-emerald-50/50 hover:bg-emerald-50/70 border-l-4 border-l-emerald-500 font-medium'
+                        : 'hover:bg-slate-50/80'
+                    }`}
                   >
-                    {/* Product Name */}
-                    <td className="py-4 px-5">
-                      <div className="flex items-center gap-2">
-                        <span className={`font-bold ${row.highlight ? 'text-slate-950 text-sm sm:text-base' : 'text-slate-800'}`}>
-                          {row.product}
-                        </span>
+                    {/* 1. Investment Type */}
+                    <td className="py-4 px-6">
+                      <div className="flex items-center gap-2.5">
                         {row.highlight && (
-                          <span className="hidden sm:inline-block bg-emerald-500/20 text-emerald-800 border border-emerald-400/40 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">
-                            Featured
-                          </span>
+                          <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 flex-shrink-0 stroke-[2.2]" />
                         )}
+                        <span
+                          className={`font-bold ${
+                            row.highlight
+                              ? 'text-emerald-700 text-sm sm:text-base font-extrabold'
+                              : 'text-slate-900'
+                          }`}
+                        >
+                          {row.investmentType}
+                        </span>
                       </div>
                     </td>
 
-                    {/* Typical Return */}
-                    <td className="py-4 px-4 text-center">
-                      <span className={row.highlight ? 'font-extrabold text-emerald-700 text-sm sm:text-base' : 'text-slate-700 font-semibold'}>
-                        {row.returnVal}
-                      </span>
-                    </td>
-
-                    {/* Risk Level */}
-                    <td className="py-4 px-4 text-center">
+                    {/* 2. Returns */}
+                    <td className="py-4 px-5">
                       <span
-                        className={`inline-block font-semibold px-2.5 py-0.5 rounded-full text-xs ${row.risk === 'Low'
-                          ? 'text-emerald-700 bg-emerald-50'
-                          : 'text-amber-800 bg-amber-50'
-                          }`}
+                        className={`${
+                          row.highlight
+                            ? 'font-extrabold text-slate-900 text-sm sm:text-base'
+                            : 'font-semibold text-slate-800'
+                        }`}
                       >
-                        {row.risk}
+                        {row.returns}
                       </span>
                     </td>
 
-                    {/* FSCS Protected */}
-                    <td className="py-4 px-4 text-center">
-                      {renderStatus(row.fscs)}
+                    {/* 3. Risk Level */}
+                    <td className="py-4 px-5">
+                      <span
+                        className={`font-medium ${
+                          row.highlight
+                            ? 'text-slate-900 font-semibold'
+                            : row.riskLevel === 'High Volatility'
+                            ? 'text-slate-800'
+                            : 'text-slate-800'
+                        }`}
+                      >
+                        {row.riskLevel}
+                      </span>
                     </td>
 
-                    {/* Fixed Rate */}
-                    <td className="py-4 px-4 text-center">
-                      {renderStatus(row.fixedRate)}
+                    {/* 4. Liquidity */}
+                    <td className="py-4 px-5 font-medium text-slate-800">
+                      {row.liquidity}
                     </td>
 
-                    {/* Access */}
-                    <td className="py-4 px-4 text-center font-medium text-slate-700">
-                      {row.access}
-                    </td>
-
-                    {/* Beats Inflation */}
-                    <td className="py-4 px-4 text-center">
-                      {renderStatus(row.beatsInflation)}
+                    {/* 5. Protection */}
+                    <td className="py-4 px-6">
+                      <span
+                        className={`font-semibold ${
+                          row.protection.includes('Insured') || row.protection.includes('Protected')
+                            ? 'text-slate-900 font-bold'
+                            : 'text-slate-600'
+                        }`}
+                      >
+                        {row.protection}
+                      </span>
                     </td>
                   </tr>
                 ))}
@@ -207,7 +167,7 @@ export default function InvestmentComparison({ onCtaClick }: InvestmentCompariso
           <div className="text-center mt-8">
             <button
               onClick={onCtaClick}
-              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all text-sm"
+              className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-extrabold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-sm"
             >
               <span>Lock In Up to 8.1% Fixed Returns</span>
               <ArrowRight className="w-4 h-4" />

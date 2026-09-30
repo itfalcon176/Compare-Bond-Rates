@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import ReturnsCalculator from '@/components/ReturnsCalculator';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import InvestmentComparison from '@/components/InvestmentComparison';
 import HowItWorks from '@/components/HowItWorks';
@@ -34,12 +33,6 @@ export default function Home() {
     setLegalModalOpen(true);
   };
 
-  const handleApplyFromCalculator = (amount: string, term: string) => {
-    setPrefillAmount(amount);
-    setPrefillTerm(term);
-    setFormModalOpen(true);
-  };
-
   return (
     <div className="min-h-screen bg-white flex flex-col selection:bg-emerald-600 selection:text-white">
       {/* 1. Header (Logo + Compare The Market with Popup Trigger) */}
@@ -55,10 +48,7 @@ export default function Home() {
           prefillTerm={prefillTerm}
         />
 
-        {/* 3. Bond Returns Calculator */}
-        <ReturnsCalculator onApplyRate={handleApplyFromCalculator} />
-
-        {/* 4. Why Choose Compare Bond Rates */}
+        {/* 3. Why Choose Compare Bond Rates */}
         <WhyChooseUs onCtaClick={handleOpenFormModal} />
 
         {/* 5. Investment Products Compared (Benchmark Table) */}

@@ -23,7 +23,6 @@ export default function Header({ onCompareClick }: HeaderProps) {
   }, []);
 
   const navLinks = [
-    { label: 'Calculator', href: '#calculator' },
     { label: 'Why Choose Us', href: '#why-us' },
     { label: 'Client Reviews', href: '#testimonials' },
     { label: 'FAQs', href: '#faq' },
