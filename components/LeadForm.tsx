@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, 
-  ArrowLeft, 
-  Lock, 
-  Clock, 
-  ShieldCheck, 
-  CheckCircle2, 
+import {
+  ArrowRight,
+  ArrowLeft,
+  Lock,
+  Clock,
+  ShieldCheck,
+  CheckCircle2,
   Calendar,
   Zap,
   Sparkles,
@@ -38,7 +38,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
   const [selectedAmount, setSelectedAmount] = useState<string>('£50,000 - £100,000');
   const [selectedTerm, setSelectedTerm] = useState<string>('2 Years');
   const [selectedTimeframe, setSelectedTimeframe] = useState<string>('Immediately');
-  
+
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -116,7 +116,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
 
   return (
     <div className="bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-3xl shadow-2xl shadow-slate-900/10 overflow-hidden transition-all duration-300">
-      
+
       {/* Top Green Accent Header with Gradient */}
       <div className="bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-700 px-6 py-5 text-center text-white relative shadow-sm">
         <h2 className="text-xl sm:text-2xl font-bold font-display text-white mb-1">
@@ -161,14 +161,20 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
           <span>Today&apos;s best rate:</span>
           <span className="font-extrabold text-emerald-700 text-xs sm:text-sm">8.1% P.A.</span>
           <span className="text-emerald-300 font-normal">·</span>
-          <span className="text-emerald-800 font-medium">Updated 29 September 2026</span>
+          <span className="text-emerald-800 font-medium">
+            Updated {new Date().toLocaleDateString("en-GB", {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric'
+            })}
+          </span>
         </div>
       </div>
 
       {/* Main Interactive Step Card Body */}
       <div className="p-6 sm:p-7 bg-white min-h-[380px] flex flex-col justify-between">
         <AnimatePresence mode="wait">
-          
+
           {/* STEP 1: How much would you like to invest? */}
           {step === 1 && (
             <motion.div
@@ -198,25 +204,22 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                       whileHover={{ scale: 1.012, y: -1 }}
                       whileTap={{ scale: 0.988 }}
                       onClick={() => handleSelectAmount(opt.label)}
-                      className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-center justify-between group ${
-                        isSelected
-                          ? 'bg-emerald-50/80 border-emerald-600 shadow-md ring-2 ring-emerald-500/20'
-                          : 'bg-slate-50/80 border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-sm'
-                      }`}
+                      className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-center justify-between group ${isSelected
+                        ? 'bg-emerald-50/80 border-emerald-600 shadow-md ring-2 ring-emerald-500/20'
+                        : 'bg-slate-50/80 border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-sm'
+                        }`}
                     >
                       <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs ${
-                          isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-200/80 text-slate-700'
-                        }`}>
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs ${isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-200/80 text-slate-700'
+                          }`}>
                           £
                         </div>
                         <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
                           {opt.label}
                         </span>
                       </div>
-                      <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${
-                        isSelected ? 'bg-emerald-600 text-white' : 'border border-slate-300 group-hover:border-emerald-500'
-                      }`}>
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${isSelected ? 'bg-emerald-600 text-white' : 'border border-slate-300 group-hover:border-emerald-500'
+                        }`}>
                         {isSelected ? <Check className="w-3.5 h-3.5" /> : <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-emerald-500" />}
                       </div>
                     </motion.button>
@@ -260,16 +263,14 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                       whileHover={{ scale: 1.012, y: -1 }}
                       whileTap={{ scale: 0.988 }}
                       onClick={() => handleSelectTerm(opt.label)}
-                      className={`w-full text-left py-3.5 px-4 rounded-2xl border transition-all duration-200 flex items-center justify-between group ${
-                        isSelected
-                          ? 'bg-emerald-50/80 border-emerald-600 shadow-md ring-2 ring-emerald-500/20'
-                          : 'bg-slate-50/80 border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-sm'
-                      }`}
+                      className={`w-full text-left py-3.5 px-4 rounded-2xl border transition-all duration-200 flex items-center justify-between group ${isSelected
+                        ? 'bg-emerald-50/80 border-emerald-600 shadow-md ring-2 ring-emerald-500/20'
+                        : 'bg-slate-50/80 border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-sm'
+                        }`}
                     >
                       <div className="flex items-center gap-2.5">
-                        <div className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs ${
-                          isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-200/80 text-slate-700'
-                        }`}>
+                        <div className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs ${isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-200/80 text-slate-700'
+                          }`}>
                           <Calendar className="w-3.5 h-3.5" />
                         </div>
                         <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
@@ -285,9 +286,8 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                         <span className="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-100">
                           {opt.rate}
                         </span>
-                        <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${
-                          isSelected ? 'bg-emerald-600 text-white' : 'border border-slate-300 group-hover:border-emerald-500'
-                        }`}>
+                        <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${isSelected ? 'bg-emerald-600 text-white' : 'border border-slate-300 group-hover:border-emerald-500'
+                          }`}>
                           {isSelected ? <Check className="w-3.5 h-3.5" /> : <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-emerald-500" />}
                         </div>
                       </div>
@@ -342,18 +342,16 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                       whileHover={{ scale: 1.012, y: -1 }}
                       whileTap={{ scale: 0.988 }}
                       onClick={() => handleSelectTimeframe(opt)}
-                      className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-center justify-between group ${
-                        isSelected
-                          ? 'bg-emerald-50/80 border-emerald-600 shadow-md ring-2 ring-emerald-500/20'
-                          : 'bg-slate-50/80 border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-sm'
-                      }`}
+                      className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-center justify-between group ${isSelected
+                        ? 'bg-emerald-50/80 border-emerald-600 shadow-md ring-2 ring-emerald-500/20'
+                        : 'bg-slate-50/80 border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-sm'
+                        }`}
                     >
                       <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
                         {opt}
                       </span>
-                      <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${
-                        isSelected ? 'bg-emerald-600 text-white' : 'border border-slate-300 group-hover:border-emerald-500'
-                      }`}>
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${isSelected ? 'bg-emerald-600 text-white' : 'border border-slate-300 group-hover:border-emerald-500'
+                        }`}>
                         {isSelected ? <Check className="w-3.5 h-3.5" /> : <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-emerald-500" />}
                       </div>
                     </motion.button>

@@ -242,9 +242,9 @@ export default function Hero({ onSuccessLead, onOpenLegal, prefillAmount, prefil
 
             {/* Main Clean Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-5xl font-extrabold font-display text-white tracking-tight leading-[1.18] max-w-xl">
-              Market-Leading High-Yield <br />
+              Compare UK Fixed-Rate <br />
               <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-white bg-clip-text text-transparent">
-                UK Fixed-Rate Bonds
+                Bonds & Earn Up to 8.1% P.A.
               </span>
             </h1>
 
