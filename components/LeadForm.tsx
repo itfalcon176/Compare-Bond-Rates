@@ -26,6 +26,7 @@ interface LeadFormProps {
     amount: string;
     term: string;
     timeframe: string;
+    consent: boolean;
   }) => void;
   onOpenLegal?: (type: string) => void;
   initialAmount?: string;
@@ -44,6 +45,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
   const [phone, setPhone] = useState('');
   const [agree, setAgree] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submissionError, setSubmissionError] = useState('');
 
   // Sync if prefilled from calculator
   useEffect(() => {
@@ -100,7 +102,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
     setSelectedTimeframe(val);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!agree) {
       alert('Please accept the Privacy Policy and Terms & Conditions to compare rates.');
@@ -108,8 +110,36 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
     }
 
     setLoading(true);
-    // Directly navigate to /thank-you
-    router.push('/thank-you');
+    setSubmissionError('');
+
+    const lead = {
+      fullName,
+      email,
+      phone,
+      amount: selectedAmount,
+      term: selectedTerm,
+      timeframe: selectedTimeframe,
+      consent: agree,
+    };
+
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || 'Unable to submit your request right now. Please try again.');
+      }
+
+      onSuccess(lead);
+      router.push('/thank-you');
+    } catch (error) {
+      setSubmissionError(error instanceof Error ? error.message : 'Unable to submit your request right now. Please try again.');
+      setLoading(false);
+    }
   };
 
   const progressPct = step === 1 ? 25 : step === 2 ? 50 : step === 3 ? 75 : 100;
@@ -504,6 +534,12 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                   </>
                 )}
               </motion.button>
+
+              {submissionError && (
+                <p role="alert" className="text-sm text-red-700 text-center">
+                  {submissionError}
+                </p>
+              )}
 
               {/* Security guarantee */}
               <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400 text-center pt-1">
