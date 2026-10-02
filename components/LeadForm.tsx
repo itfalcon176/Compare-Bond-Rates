@@ -44,6 +44,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
   const [phone, setPhone] = useState('');
   const [agree, setAgree] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   // Sync if prefilled from calculator
   useEffect(() => {
@@ -100,16 +101,57 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
     setSelectedTimeframe(val);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMsg(null);
+
     if (!agree) {
       alert('Please accept the Privacy Policy and Terms & Conditions to compare rates.');
       return;
     }
 
+    if (!fullName.trim() || !email.trim() || !phone.trim()) {
+      setErrorMsg('Please fill in all required contact fields.');
+      return;
+    }
+
     setLoading(true);
-    // Directly navigate to /thank-you
-    router.push('/thank-you');
+
+    const formData = {
+      fullName: fullName.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
+      amount: selectedAmount,
+      term: selectedTerm,
+      timeframe: selectedTimeframe,
+    };
+
+    try {
+      const response = await fetch('/api/compare-rates', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit lead.');
+      }
+
+      if (onSuccess) {
+        onSuccess(formData);
+      }
+
+      // Directly navigate to /thank-you
+      router.push('/thank-you');
+    } catch (err: any) {
+      console.error('Lead submission error:', err);
+      setErrorMsg(err?.message || 'An error occurred while submitting your request. Please try again.');
+      setLoading(false);
+    }
   };
 
   const progressPct = step === 1 ? 25 : step === 2 ? 50 : step === 3 ? 75 : 100;
@@ -481,6 +523,13 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                   </span>
                 </label>
               </div>
+
+              {/* Error Message Display */}
+              {errorMsg && (
+                <div className="p-3 bg-rose-50 border border-rose-200/80 rounded-xl text-xs font-semibold text-rose-700 leading-relaxed">
+                  {errorMsg}
+                </div>
+              )}
 
               {/* Green COMPARE NOW CTA Button */}
               <motion.button
