@@ -26,6 +26,7 @@ interface LeadFormProps {
     amount: string;
     term: string;
     timeframe: string;
+    consent: boolean;
   }) => void;
   onOpenLegal?: (type: string) => void;
   initialAmount?: string;
@@ -44,7 +45,11 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
   const [phone, setPhone] = useState('');
   const [agree, setAgree] = useState(false);
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+=======
+  const [submissionError, setSubmissionError] = useState('');
+>>>>>>> 3ff50197f402d92e3c84b67c449c1ca2b150e27f
 
   // Sync if prefilled from calculator
   useEffect(() => {
@@ -116,6 +121,7 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
     }
 
     setLoading(true);
+<<<<<<< HEAD
 
     const formData = {
       fullName: fullName.trim(),
@@ -150,6 +156,36 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
     } catch (err: any) {
       console.error('Lead submission error:', err);
       setErrorMsg(err?.message || 'An error occurred while submitting your request. Please try again.');
+=======
+    setSubmissionError('');
+
+    const lead = {
+      fullName,
+      email,
+      phone,
+      amount: selectedAmount,
+      term: selectedTerm,
+      timeframe: selectedTimeframe,
+      consent: agree,
+    };
+
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || 'Unable to submit your request right now. Please try again.');
+      }
+
+      onSuccess(lead);
+      router.push('/thank-you');
+    } catch (error) {
+      setSubmissionError(error instanceof Error ? error.message : 'Unable to submit your request right now. Please try again.');
+>>>>>>> 3ff50197f402d92e3c84b67c449c1ca2b150e27f
       setLoading(false);
     }
   };
@@ -553,6 +589,12 @@ export default function LeadForm({ onSuccess, onOpenLegal, initialAmount, initia
                   </>
                 )}
               </motion.button>
+
+              {submissionError && (
+                <p role="alert" className="text-sm text-red-700 text-center">
+                  {submissionError}
+                </p>
+              )}
 
               {/* Security guarantee */}
               <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400 text-center pt-1">
