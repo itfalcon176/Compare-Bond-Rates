@@ -94,7 +94,7 @@ Investment Timeline: ${timeframe}
 
     const data = await resend.emails.send({
       from: 'leads@comparebondrates.co.uk',
-      to: ['comparebondrateslead@atomicmail.co.uk'],
+      to: ['comparebondrateslead@atomicmail.io'],
       replyTo: cleanEmail,
       subject: subject,
       html: htmlContent,
